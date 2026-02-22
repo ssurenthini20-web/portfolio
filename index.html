@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Surenthini SIVAKUMAR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== Menu Sticky ===== -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== Header ===== -->
+    <header>
+        <h1>Surenthini SIVAKUMAR</h1>
+        <h2>Science des données | 2025-2026</h2>
+        <p>BIENVENUE DANS MON UNIVERS</p>
+    </header>
+
+    <!-- ===== Section À propos ===== -->
+    <section id="about" class="fade-in">
+        <h2>Qui est Surenthini SIVAKUMAR ?</h2>
+        <div class="about-container">
+            <div class="about-photo">
+                <img src="photo.jpg" alt="Surenthini SIVAKUMAR">
+            </div>
+            <div class="about-text">
+                <p>Je suis étudiante en BUT Sciences des Données à l’IUT de Villetaneuse. Mon parcours entre le désir d’aider les gens et la passion pour les chiffres, m’a menée vers un objectif clair : <strong>utiliser les données pour améliorer la santé.</strong></p>
+                <p>Avant cela, j’ai obtenu un bac pro ASSP. Mes expériences en stages m’ont permis de comprendre l’importance d’orienter ma carrière vers un domaine plus analytique.</p>
+                <p>J’aime particulièrement la data visualisation, l’analyse statistique et la modélisation de données. Pour atteindre mes objectifs, je travaille sur mes projets universitaires, mes compétences techniques et mes outils d’analyse de données.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Section Projets ===== -->
+    <section id="projects" class="fade-in">
+        <h2>Mes Projets</h2>
+
+        <div class="project">
+            <h3>Tableau de bord santé</h3>
+            <p>Création d’un tableau de bord interactif avec Python et Tableau pour analyser des données de santé.</p>
+        </div>
+
+        <div class="project">
+            <h3>Analyse prédictive</h3>
+            <p>Prédiction des tendances de consommation à partir de jeux de données anonymisés en Python.</p>
+        </div>
+
+    </section>
+
+    <!-- ===== Section Compétences ===== -->
+    <section id="skills" class="fade-in">
+        <h2>Compétences</h2>
+
+        <div class="skill">
+            <p>Python</p>
+            <div class="skill-bar"><div class="skill-level" data-width="90%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>R</p>
+            <div class="skill-bar"><div class="skill-level" data-width="85%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>Machine Learning</p>
+            <div class="skill-bar"><div class="skill-level" data-width="75%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>Data Visualization</p>
+            <div class="skill-bar"><div class="skill-level" data-width="80%"></div></div>
+        </div>
+
+    </section>
+
+    <!-- ===== Section Contact ===== -->
+    <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <p>Email : <a href="mailto:s.surenthini20@gmail.com">s.surenthini20@gmail.com</a></p>
+        <p>LinkedIn : <a href="https://www.linkedin.com/in/sivakumar-surenthini20/" target="_blank">Mon profil</a></p>
+    </section>
+
+    <!-- ===== Script pour animations ===== -->
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.2 };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+            entries.forEach(entry => {
+                if(!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => { appearOnScroll.observe(fader); });
+
+        // Animation barres de compétences
+        const skills = document.querySelectorAll('.skill-level');
+        window.addEventListener('scroll', () => {
+            skills.forEach(skill => {
+                const skillTop = skill.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if(skillTop < windowHeight - 50){
+                    skill.style.width = skill.getAttribute('data-width');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
