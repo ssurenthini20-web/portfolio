@@ -133,3 +133,27 @@ footer {
   background: #6C63FF;
   color: white;
 }
+/* Section Mon Parcours */
+.parcours-item {
+  background: #f0f0ff;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #6C63FF;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.parcours-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+#parcours h3 {
+  color: #6C63FF;
+  margin-bottom: 0.5rem;
+}
+
+#parcours p {
+  color: #333;
+  line-height: 1.5;
+}
