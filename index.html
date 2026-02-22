@@ -3,91 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Surenthini Sivakumar</title>
+  <title>Portfolio Surenthini SIVAKUMAR</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-<header>
-  <div class="container header-container">
-    <h1>Surenthini Sivakumar</h1>
-    <p>Étudiante en Sciences des Données | Futur Data Analyst</p>
+  <header>
+    <div class="logo">Surenthini SIVAKUMAR</div>
     <nav>
-      <a href="#profil">Profil</a>
-      <a href="#projets">Projets</a>
-      <a href="#competences">Compétences</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#stage">Stage</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section id="profil" class="fade-in">
-  <div class="container">
-    <h2>Salut ! Moi c’est Surenthini 👋</h2>
-    <div class="profil">
-      <img src="profil.jpg" alt="Surenthini Sivakumar">
-      <div class="profil-text">
-        <p>Je suis étudiante en Sciences des Données, passionnée par l’analyse et la visualisation des données. Mon objectif est de devenir Data Analyst dans le secteur médical et avoir un vrai impact grâce aux données.</p>
-        <p>Je travaille avec Python, R, SQL, Excel et Power BI. J’adore créer des projets qui racontent une histoire à partir des données et rendre les analyses compréhensibles.</p>
-      </div>
+  <section id="apropos" class="section fade-in">
+    <h1>À propos de moi 👋</h1>
+    <p>
+      Moi c’est <strong>Surenthini SIVAKUMAR</strong><br>
+      Je suis actuellement en deuxième année de Bachelor Universitaire de Technologie (BUT) en Science des Données à l'Institut Universitaire de Technologie de Villetaneuse.
+      J’adore jouer avec les chiffres, explorer des datasets et découvrir des tendances cachées.
+    </p>
+    <p>
+      <strong>Data analyst :</strong> Mon objectif est de devenir data analyst dans le secteur médical et aider à prendre de meilleures décisions grâce aux données.
+    </p>
+    <p>
+      Je passe mon temps libre à coder sur Python, R, SQL, explorer des projets open-source et améliorer mes compétences en machine learning.
+    </p>
+  </section>
+
+  <section id="parcours" class="section fade-in">
+    <h2>Mon Parcours</h2>
+    <ul>
+      <li><strong>2024 - Présent :</strong> BUT Sciences des données, 2ème année – Université Sorbonne Paris Nord, Villetaneuse</li>
+      <li><strong>2020 - 2023 :</strong> BAC PRO ASSP (Accompagnement soins et services à la personne) – Mention Très bien – Lycée Blaise Pascal, Villemomble</li>
+    </ul>
+    <h3>Objectif pour Septembre 2026</h3>
+    <p>Alternance en Data Science – Recherche d'une alternance de 12 mois pour approfondir mes compétences en traitement de données.</p>
+    <h3>Objectif à long terme</h3>
+    <p>Data Analyst – Poursuite d'études en Master pour devenir data analyst et produire des prédictions impactantes dans la prise de décision.</p>
+  </section>
+
+  <section id="competences" class="section fade-in">
+    <h2>Mes Compétences</h2>
+    <div class="competences-grid">
+      <div class="competence">Python</div>
+      <div class="competence">R</div>
+      <div class="competence">SQL</div>
+      <div class="competence">Excel & Power BI</div>
+      <div class="competence">Machine Learning</div>
+      <div class="competence">Statistiques & Modélisation</div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="projets" class="fade-in">
-  <div class="container">
-    <h2>Mes Projets 🚀</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Application Shiny - Consommation énergétique ⚡</h3>
-        <p>Application web interactive pour analyser la consommation énergétique en France.</p>
-        <div class="skills"><span>R</span><span>Shiny</span><span>DataViz</span></div>
+  <section id="projets" class="section fade-in">
+    <h2>Mes Projets</h2>
+    <div class="projets-grid">
+      <div class="projet-card">
+        <h3>Application Shiny – Consommation énergétique</h3>
+        <p>Création d'une application web avec R Studio pour visualiser les tendances sur plusieurs années et régions.</p>
       </div>
-      <div class="project-card">
-        <h3>Tableau de bord Excel 📊</h3>
-        <p>Nettoyage de données et création d’un tableau de bord interactif pour suivre les tendances clés.</p>
-        <div class="skills"><span>Excel</span><span>Power Query</span><span>DataViz</span></div>
+      <div class="projet-card">
+        <h3>Analyse des habitudes alimentaires</h3>
+        <p>Étude statistique et création de visualisations pour interpréter les données collectées.</p>
       </div>
-      <div class="project-card">
-        <h3>Analyse des habitudes alimentaires 🍝</h3>
-        <p>Projet statistique pour étudier les habitudes alimentaires via sondage et analyse inferentielle.</p>
-        <div class="skills"><span>R</span><span>Python</span><span>Statistiques</span></div>
-      </div>
+      <!-- Tu pourras ajouter les autres projets ici -->
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="competences" class="fade-in">
-  <div class="container">
-    <h2>Compétences 💡</h2>
-    <div class="skills-list">
-      <div class="skill"><span>Python</span><div class="bar"><div class="fill" data-width="90%"></div></div></div>
-      <div class="skill"><span>R & Shiny</span><div class="bar"><div class="fill" data-width="85%"></div></div></div>
-      <div class="skill"><span>SQL</span><div class="bar"><div class="fill" data-width="80%"></div></div></div>
-      <div class="skill"><span>Excel / Power BI</span><div class="bar"><div class="fill" data-width="95%"></div></div></div>
-    </div>
-  </div>
-</section>
+  <section id="stage" class="section fade-in">
+    <h2>Stage</h2>
+    <p>GHT Plaine de France – Analyste de données de santé (Avril à Juin 2025)</p>
+    <ul>
+      <li>Traitement et analyse de données sur SAS et Excel</li>
+      <li>Présentation des résultats à l’aide de diaporamas interactifs</li>
+    </ul>
+  </section>
 
-<section id="contact" class="fade-in">
-  <div class="container">
-    <h2>Contactez-moi ✉️</h2>
-    <div class="contact">
-      <form>
-        <input type="text" placeholder="Votre nom" required>
-        <input type="email" placeholder="Votre email" required>
-        <textarea rows="5" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </div>
-  </div>
-</section>
+  <section id="contact" class="section fade-in">
+    <h2>Contactez-moi</h2>
+    <p>Email : <a href="mailto:s.surenthini20@gmail.com">s.surenthini20@gmail.com</a></p>
+    <p>Téléphone : +33 6 05 58 60 92</p>
+    <p>Adresse : 16 Rue Frédéric Passy, 93330 Neuilly-sur-Marne</p>
+  </section>
 
-<footer>
-  <p>© 2026 Surenthini Sivakumar | Tous droits réservés</p>
-</footer>
-
-<script src="script.js"></script>
+  <footer>
+    <p>© 2026 Surenthini SIVAKUMAR. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
