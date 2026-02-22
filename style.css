@@ -66,27 +66,29 @@ p {
   margin-bottom: 1rem;
 }
 
-/* À propos */
-.apropos-content {
+.apropos-container {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  align-items: flex-start;
+  gap: 1.5rem; /* espace entre photo et texte */
 }
 
-/* Photo réduite pour l'intro */
 .apropos-photo img {
-  width: 100px;   /* largeur réduite */
-  height: 100px;  /* hauteur réduite */
+  width: 80px;       /* petite photo */
+  height: 80px;
   object-fit: cover;
-  border-radius: 50%;  /* photo ronde */
-  border: 3px solid #FFD166;  /* bordure fine */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);  /* ombre plus légère */
-  transition: transform 0.3s ease;
+  border-radius: 50%; /* photo ronde */
+  border: 2px solid #FFD166;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.apropos-photo img:hover {
-  transform: scale(1.05);  /* léger zoom au survol */
+.apropos-text h2 {
+  margin-bottom: 0.5rem;
+  color: #6C63FF;
+}
+
+.apropos-text p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
 /* Timeline Parcours */
