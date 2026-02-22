@@ -75,9 +75,17 @@ p {
 }
 
 .apropos-photo img {
-  max-width: 250px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%; /* photo ronde */
+  border: 5px solid #FFD166;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease;
+}
+
+.apropos-photo img:hover {
+  transform: scale(1.05);
 }
 
 /* Timeline Parcours */
