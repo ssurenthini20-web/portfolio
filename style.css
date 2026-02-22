@@ -57,15 +57,58 @@ header nav ul li a:hover {
   padding: 0 2rem;
 }
 
-/* Titres */
 h1, h2, h3 {
   color: #6C63FF;
   margin-bottom: 1rem;
 }
 
-/* Paragraphes */
 p {
   margin-bottom: 1rem;
+}
+
+/* À propos */
+.apropos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.apropos-photo img {
+  max-width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Timeline Parcours */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 3px solid #6C63FF;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background: #FFD166;
+  border-radius: 50%;
+  border: 3px solid #6C63FF;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #6C63FF;
+  margin-bottom: 0.5rem;
 }
 
 /* Compétences */
@@ -116,14 +159,7 @@ p {
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* Footer */
@@ -133,27 +169,17 @@ footer {
   background: #6C63FF;
   color: white;
 }
-/* Section Mon Parcours */
-.parcours-item {
-  background: #f0f0ff;
-  padding: 1rem 1.5rem;
-  border-left: 5px solid #6C63FF;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.parcours-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
+/* Responsive */
+@media (min-width: 768px) {
+  .apropos-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-#parcours h3 {
-  color: #6C63FF;
-  margin-bottom: 0.5rem;
-}
-
-#parcours p {
-  color: #333;
-  line-height: 1.5;
+  .apropos-content p {
+    flex: 1;
+    margin-right: 2rem;
+  }
 }
