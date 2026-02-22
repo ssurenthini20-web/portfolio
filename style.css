@@ -13,6 +13,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Header */
 header {
   background: #6C63FF;
   color: white;
@@ -66,29 +67,53 @@ p {
   margin-bottom: 1rem;
 }
 
+/* À propos */
 .apropos-container {
   display: flex;
+  gap: 2rem;
   align-items: flex-start;
-  gap: 1.5rem; /* espace entre photo et texte */
+  flex-wrap: wrap;
 }
 
 .apropos-photo img {
-  width: 80px;       /* petite photo */
-  height: 80px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 50%; /* photo ronde */
-  border: 2px solid #FFD166;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 50%;
+  border: 3px solid #FFD166;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.apropos-text h2 {
-  margin-bottom: 0.5rem;
-  color: #6C63FF;
+.apropos-text {
+  flex: 1;
 }
 
 .apropos-text p {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Compétences */
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.competence {
+  background: #FFD166;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.competence:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 /* Timeline Parcours */
@@ -122,29 +147,6 @@ p {
   margin-bottom: 0.5rem;
 }
 
-/* Compétences */
-.competences-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.competence {
-  background: #FFD166;
-  color: #333;
-  padding: 1rem;
-  border-radius: 12px;
-  text-align: center;
-  font-weight: 500;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.competence:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
 /* Projets */
 .projets-grid {
   display: grid;
@@ -166,11 +168,17 @@ p {
   box-shadow: 0 15px 25px rgba(0,0,0,0.3);
 }
 
-/* Fade in animation */
+/* Fade in */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Contact */
+.contact {
+  margin-top: 1rem;
+  font-weight: 500;
 }
 
 /* Footer */
@@ -182,15 +190,18 @@ footer {
 }
 
 /* Responsive */
-@media (min-width: 768px) {
-  .apropos-content {
-    flex-direction: row;
-    justify-content: space-between;
+@media (max-width: 768px) {
+  .apropos-container {
+    flex-direction: column;
     align-items: center;
   }
 
-  .apropos-content p {
-    flex: 1;
-    margin-right: 2rem;
+  .apropos-photo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .apropos-text {
+    text-align: center;
   }
 }
