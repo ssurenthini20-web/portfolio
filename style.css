@@ -1,4 +1,3 @@
-/* ===== Style général ===== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,36 +9,18 @@ body {
 
 header {
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
     background-color: #4a90e2;
     color: white;
-}
-
-section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-h1, h2, h3 {
-    margin-bottom: 20px;
-}
-
-/* ===== Menu Sticky ===== */
-nav {
-    position: sticky;
-    top: 0;
-    background: #4a90e2;
-    padding: 10px 0;
-    z-index: 1000;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    background: #333;
 }
 
 nav ul li {
@@ -49,30 +30,39 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    padding: 15px 0;
+    display: block;
 }
 
-nav ul li a:hover {
-    color: #ffdd59;
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* ===== Section Projets ===== */
 .project {
     background: white;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
 }
 
-/* ===== Section À propos ===== */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section photo */
 .about-container {
     display: flex;
     align-items: flex-start;
@@ -92,49 +82,6 @@ nav ul li a:hover {
     min-width: 250px;
 }
 
-/* ===== Compétences ===== */
-.skill {
-    margin-bottom: 20px;
-}
-
-.skill-bar {
-    background: #ddd;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 20px;
-}
-
-.skill-level {
-    height: 100%;
-    background: #4a90e2;
-    width: 0;
-    border-radius: 20px;
-    transition: width 1.5s ease-in-out;
-}
-
-/* ===== Fade-in animation ===== */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== Liens ===== */
-a {
-    color: #4a90e2;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #ffdd59;
-}
-
-/* ===== Adaptation mobile ===== */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
@@ -143,8 +90,5 @@ a:hover {
     }
     .about-photo img {
         width: 200px;
-    }
-    nav ul {
-        flex-direction: column;
     }
 }
