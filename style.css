@@ -90,18 +90,6 @@ h2 {
   color: #e2e8f0; /* texte blanc pour lisibilité */
 }
 
-/* Texte des sections */
-.parcours-text,
-.timeline-item p,
-.timeline-item li,
-.competence,
-.projet-card p,
-.projet-card li,
-#contact p,
-#contact a {
-  color: #e2e8f0; /* texte blanc pour lisibilité */
-}
-
 /* Cartes compétences */
 .competence {
   background: #1f2937; /* sombre */
