@@ -8,9 +8,15 @@ body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  color: #e2e8f0;
-  background: #0b1120;
-  position: relative;
+  color: #222;
+
+  background: linear-gradient(
+    to bottom,
+    #0f172a 0%,
+    #0f172a 35%,
+    #1e293b 45%,
+    #f8fafc 75%
+  );
 }
 
 /* ====== LUMIÈRES DÉCORATIVES ====== */
