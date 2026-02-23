@@ -8,41 +8,34 @@ body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  color: #1e293b;
-  background: #f8fafc;
+  color: #e2e8f0;
+  background: #0b1120;
   position: relative;
 }
 
-/* ====== FORMES DÉCORATIVES ====== */
+/* ====== LUMIÈRES DÉCORATIVES ====== */
 body::before,
 body::after {
   content: "";
   position: fixed;
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(150px);
   z-index: -1;
-  animation: float 12s ease-in-out infinite;
+  opacity: 0.6;
 }
 
 body::before {
   background: #6366f1;
-  top: -200px;
-  left: -200px;
+  top: -150px;
+  left: -150px;
 }
 
 body::after {
   background: #0ea5e9;
-  bottom: -200px;
-  right: -200px;
-  animation-delay: 4s;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(40px); }
-  100% { transform: translateY(0px); }
+  bottom: -150px;
+  right: -150px;
 }
 
 /* ===== HEADER ===== */
@@ -51,8 +44,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
-  background: #0f172a;
-  color: white;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -61,6 +55,7 @@ header {
 .logo {
   font-weight: 700;
   font-size: 1.2rem;
+  color: #ffffff;
 }
 
 nav ul {
@@ -71,7 +66,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: #cbd5e1;
   font-weight: 500;
   transition: 0.3s;
 }
@@ -85,15 +80,16 @@ nav a:hover {
   max-width: 1100px;
   margin: 6rem auto;
   padding: 3rem;
-  background: white;
+  background: #111827;
   border-radius: 25px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
+/* Titres */
 h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #0f172a;
+  color: #38bdf8;
 }
 
 /* ===== À PROPOS ===== */
@@ -108,12 +104,13 @@ h2 {
   height: 250px;
   object-fit: cover;
   border-radius: 25px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 .apropos-text {
   flex: 1;
   line-height: 1.8;
+  color: #e2e8f0;
 }
 
 /* ===== COMPÉTENCES ===== */
@@ -124,7 +121,7 @@ h2 {
 }
 
 .competence {
-  background: #f1f5f9;
+  background: #1f2937;
   padding: 1rem;
   border-radius: 15px;
   text-align: center;
@@ -133,7 +130,8 @@ h2 {
 }
 
 .competence:hover {
-  background: #e0f2fe;
+  background: #0ea5e9;
+  color: white;
   transform: translateY(-5px);
 }
 
@@ -145,26 +143,27 @@ h2 {
 }
 
 .projet-card {
-  background: #ffffff;
+  background: #1f2937;
   padding: 2rem;
   border-radius: 20px;
   transition: 0.4s;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .projet-card:hover {
   transform: translateY(-8px);
+  background: #111827;
 }
 
 /* ===== TIMELINE ===== */
 .timeline {
-  border-left: 3px solid #0ea5e9;
+  border-left: 3px solid #38bdf8;
   padding-left: 2rem;
 }
 
 .timeline-date {
   font-weight: bold;
-  color: #0ea5e9;
+  color: #38bdf8;
 }
 
 /* ===== FADE ===== */
@@ -179,7 +178,7 @@ footer {
   text-align: center;
   padding: 3rem;
   margin-top: 3rem;
-  color: #64748b;
+  color: #94a3b8;
 }
 
 /* ===== RESPONSIVE ===== */
