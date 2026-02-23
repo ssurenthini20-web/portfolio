@@ -10,8 +10,8 @@ body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  color: #e2e8f0;
-  background: linear-gradient(to bottom, #0b1120 0%, #111827 35%, #111827 100%);
+  color: #e2e8f0; /* texte blanc par défaut */
+  background: linear-gradient(to bottom, #0b1120 0%, #111827 100%);
 }
 
 /* ===== HEADER ===== */
@@ -44,30 +44,30 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: white; /* lien blanc */
   font-weight: 600;
   font-size: 1rem;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #38bdf8;
+  color: #38bdf8; /* accent bleu clair */
 }
 
 /* ===== SECTIONS ===== */
 
-/* À propos - inchangée */
+/* À propos reste sombre et blanc */
 #apropos.section {
   background: #111827;
   color: #e2e8f0;
 }
 
-/* Les autres sections - fond sombre + texte blanc */
+/* Autres sections - texte blanc sur fond sombre */
 #parcours.section,
 #competences.section,
 #projets.section,
 #contact.section {
-  background: #111827; /* sombre comme À propos */
+  background: #111827; /* sombre */
   color: #e2e8f0; /* texte blanc */
 }
 
