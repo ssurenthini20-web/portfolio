@@ -10,8 +10,8 @@ body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  color: #e2e8f0; /* texte blanc */
-  background: #111827; /* fond sombre uniforme */
+  color: #e2e8f0;
+  background: #0b1120; /* sombre uniforme pour le body */
 }
 
 /* ===== HEADER ===== */
@@ -20,7 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
-  background: #0b1120; /* sombre */
+  background: #0b1120; /* sombre pour menu */
   color: white;
   position: sticky;
   top: 0;
@@ -42,35 +42,27 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: white; /* lien blanc */
+  color: white;
   font-weight: 600;
   font-size: 1rem;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #38bdf8; /* accent bleu clair */
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  max-width: 1100px;
-  margin: 6rem auto;
-  padding: 3rem;
-  background: #111827; /* sombre uniforme */
-  color: #e2e8f0; /* texte blanc */
-  border-radius: 25px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-}
-
-/* Titres */
-h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
   color: #38bdf8;
 }
 
 /* ===== À PROPOS ===== */
+#apropos.section {
+  background: #1e293b; /* légèrement plus clair que #111827 */
+  color: #e2e8f0; /* texte blanc */
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  padding: 3rem;
+  max-width: 1100px;
+  margin: 6rem auto;
+}
+
 .apropos-container {
   display: flex;
   gap: 3rem;
@@ -88,16 +80,42 @@ h2 {
 .apropos-text {
   flex: 1;
   line-height: 1.8;
+  color: #e2e8f0; /* texte blanc */
+}
+
+/* ===== AUTRES SECTIONS ===== */
+#parcours.section,
+#competences.section,
+#projets.section,
+#contact.section {
+  background: #111827; /* sombre uniforme */
+  color: #e2e8f0;
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  padding: 3rem;
+  max-width: 1100px;
+  margin: 6rem auto;
+}
+
+/* Titres */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #38bdf8;
+}
+
+/* Texte des autres sections */
+.timeline-item p,
+.timeline-item li,
+.competence,
+.projet-card p,
+.projet-card li,
+#contact p,
+#contact a {
   color: #e2e8f0;
 }
 
-/* ===== COMPÉTENCES ===== */
-.competences-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-}
-
+/* Cartes compétences */
 .competence {
   background: #1f2937;
   padding: 1rem;
@@ -114,13 +132,7 @@ h2 {
   transform: translateY(-5px);
 }
 
-/* ===== PROJETS ===== */
-.projets-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
+/* Cartes projets */
 .projet-card {
   background: #1f2937;
   color: #e2e8f0;
@@ -136,7 +148,7 @@ h2 {
   color: white;
 }
 
-/* ===== TIMELINE ===== */
+/* Timeline */
 .timeline {
   border-left: 3px solid #38bdf8;
   padding-left: 2rem;
@@ -147,14 +159,14 @@ h2 {
   color: #38bdf8;
 }
 
-/* ===== FADE ===== */
+/* Fade-in */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
   transition: all 1s ease;
 }
 
-/* ===== FOOTER ===== */
+/* Footer */
 footer {
   text-align: center;
   padding: 3rem;
@@ -162,7 +174,7 @@ footer {
   color: #94a3b8;
 }
 
-/* ===== RESPONSIVE ===== */
+/* Responsive */
 @media (max-width: 900px) {
   .apropos-container {
     flex-direction: column;
