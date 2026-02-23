@@ -10,8 +10,8 @@ body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  color: #1e293b;
-  background: linear-gradient(to bottom, #0b1120 0%, #111827 35%, #f8fafc 100%);
+  color: #e2e8f0;
+  background: linear-gradient(to bottom, #0b1120 0%, #111827 35%, #111827 100%);
 }
 
 /* ===== HEADER ===== */
@@ -56,62 +56,48 @@ nav a:hover {
 
 /* ===== SECTIONS ===== */
 
-/* À propos - reste sombre */
+/* À propos - inchangée */
 #apropos.section {
   background: #111827;
   color: #e2e8f0;
 }
 
-/* Autres sections claires pour lisibilité */
+/* Les autres sections - fond sombre + texte blanc */
 #parcours.section,
 #competences.section,
 #projets.section,
 #contact.section {
-  background: #f8fafc; /* clair */
-  color: #1e293b;
+  background: #111827; /* sombre comme À propos */
+  color: #e2e8f0; /* texte blanc */
 }
 
 /* Titres */
 h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #0f172a;
+  color: #38bdf8; /* accent bleu clair */
 }
 
-/* ===== À PROPOS ===== */
-.apropos-container {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
+/* Texte des sections */
+.apropos-text,
+.timeline-item p,
+.timeline-item li,
+.competence,
+.projet-card p,
+.projet-card li,
+#contact p,
+#contact a {
+  color: #e2e8f0; /* texte blanc pour lisibilité */
 }
 
-.apropos-photo img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 25px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
-
-.apropos-text {
-  flex: 1;
-  line-height: 1.8;
-}
-
-/* ===== COMPÉTENCES ===== */
-.competences-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-}
-
+/* Cartes compétences */
 .competence {
-  background: #ffffff;
+  background: #1f2937; /* sombre */
+  color: #e2e8f0;
   padding: 1rem;
   border-radius: 15px;
   text-align: center;
   font-weight: 600;
-  color: #1e293b;
   transition: 0.3s;
 }
 
@@ -121,20 +107,14 @@ h2 {
   transform: translateY(-5px);
 }
 
-/* ===== PROJETS ===== */
-.projets-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
+/* Cartes projets */
 .projet-card {
-  background: #ffffff;
+  background: #1f2937;
+  color: #e2e8f0;
   padding: 2rem;
   border-radius: 20px;
   transition: 0.4s;
-  color: #1e293b;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .projet-card:hover {
@@ -143,7 +123,7 @@ h2 {
   transform: translateY(-8px);
 }
 
-/* ===== TIMELINE ===== */
+/* Timeline */
 .timeline {
   border-left: 3px solid #38bdf8;
   padding-left: 2rem;
@@ -154,22 +134,22 @@ h2 {
   color: #38bdf8;
 }
 
-/* ===== FADE-IN ===== */
+/* Fade-in */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
   transition: all 1s ease;
 }
 
-/* ===== FOOTER ===== */
+/* Footer */
 footer {
   text-align: center;
   padding: 3rem;
   margin-top: 3rem;
-  color: #1e293b;
+  color: #94a3b8;
 }
 
-/* ===== RESPONSIVE ===== */
+/* Responsive */
 @media (max-width: 900px) {
   .apropos-container {
     flex-direction: column;
