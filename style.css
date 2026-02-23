@@ -6,28 +6,18 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #333;
   scroll-behavior: smooth;
   overflow-x: hidden;
+
+  background: radial-gradient(circle at top left, #e0e7ff, transparent 40%),
+              radial-gradient(circle at bottom right, #ffe0cc, transparent 40%),
+              #f9f9ff;
 }
 
-/* Background animé */
-.background-animation {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(-45deg, #6C63FF, #FF7F50, #FFD166, #3A86FF);
-  background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
-  z-index: -1;
+  /* Nouveau fond doux et fixe */
+  background: linear-gradient(to bottom right, #f8f9ff, #eef1ff);
 }
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 /* Header */
 header {
   display: flex;
@@ -123,7 +113,8 @@ h2 {
 }
 
 .projet-card {
-  background: rgba(255,255,255,0.15);
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   padding: 2rem;
   border-radius: 20px;
   transition: 0.4s;
