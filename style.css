@@ -10,8 +10,8 @@ body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  color: #e2e8f0;
-  background: linear-gradient(to bottom, #0b1120 0%, #111827 50%, #f8fafc 90%);
+  color: #1e293b;
+  background: linear-gradient(to bottom, #0b1120 0%, #111827 35%, #f8fafc 100%);
 }
 
 /* ===== HEADER ===== */
@@ -51,24 +51,31 @@ nav a {
 }
 
 nav a:hover {
-  color: #38bdf8; /* accent bleu clair */
+  color: #38bdf8;
 }
 
 /* ===== SECTIONS ===== */
-.section {
-  max-width: 1100px;
-  margin: 6rem auto;
-  padding: 3rem;
-  background: #111827; /* sombre mais lisible */
-  border-radius: 25px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+
+/* À propos - reste sombre */
+#apropos.section {
+  background: #111827;
+  color: #e2e8f0;
+}
+
+/* Autres sections claires pour lisibilité */
+#parcours.section,
+#competences.section,
+#projets.section,
+#contact.section {
+  background: #f8fafc; /* clair */
+  color: #1e293b;
 }
 
 /* Titres */
 h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #38bdf8;
+  color: #0f172a;
 }
 
 /* ===== À PROPOS ===== */
@@ -89,7 +96,6 @@ h2 {
 .apropos-text {
   flex: 1;
   line-height: 1.8;
-  color: #e2e8f0;
 }
 
 /* ===== COMPÉTENCES ===== */
@@ -100,11 +106,12 @@ h2 {
 }
 
 .competence {
-  background: #1f2937;
+  background: #ffffff;
   padding: 1rem;
   border-radius: 15px;
   text-align: center;
   font-weight: 600;
+  color: #1e293b;
   transition: 0.3s;
 }
 
@@ -122,16 +129,18 @@ h2 {
 }
 
 .projet-card {
-  background: #1f2937;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 20px;
   transition: 0.4s;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  color: #1e293b;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .projet-card:hover {
+  background: #0ea5e9;
+  color: white;
   transform: translateY(-8px);
-  background: #111827;
 }
 
 /* ===== TIMELINE ===== */
@@ -157,7 +166,7 @@ footer {
   text-align: center;
   padding: 3rem;
   margin-top: 3rem;
-  color: #94a3b8;
+  color: #1e293b;
 }
 
 /* ===== RESPONSIVE ===== */
