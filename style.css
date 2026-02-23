@@ -3,16 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
   scroll-behavior: smooth;
   overflow-x: hidden;
 
-  background: radial-gradient(circle at top left, #e0e7ff, transparent 40%),
-              radial-gradient(circle at bottom right, #ffe0cc, transparent 40%),
-              #f9f9ff;
+  /* Nouveau fond doux et fixe */
+  background: linear-gradient(to bottom right, #f8f9ff, #eef1ff);
 }
 
   /* Nouveau fond doux et fixe */
