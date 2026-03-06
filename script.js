@@ -1,20 +1,24 @@
-let topBtn = document.getElementById("topBtn");
+document.addEventListener("DOMContentLoaded", () => {
 
-window.onscroll = function() {
+const faders = document.querySelectorAll(".fade-in");
 
-if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-topBtn.style.display = "block";
-} else {
-topBtn.style.display = "none";
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity = 1;
+entry.target.style.transform = "translateY(0)";
+
 }
 
-};
-
-topBtn.onclick = function() {
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
 });
 
-};
+},{
+threshold:0.2
+});
+
+faders.forEach(el => observer.observe(el));
+
+});
