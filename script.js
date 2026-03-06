@@ -1,24 +1,24 @@
-// Animation fade-in au scroll
 document.addEventListener("DOMContentLoaded", () => {
-  const faders = document.querySelectorAll(".fade-in");
 
-  const appearOptions = {
-    threshold: 0.2,
-    rootMargin: "0px 0px -50px 0px"
-  };
+const faders = document.querySelectorAll(".fade-in");
 
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
+const observer = new IntersectionObserver(entries => {
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity = 1;
+entry.target.style.transform = "translateY(0)";
+
+}
+
 });
 
+},{
+threshold:0.2
+});
 
+faders.forEach(el => observer.observe(el));
+
+});
