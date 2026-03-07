@@ -9,7 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #fdfcfb;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.8; /* Ligne plus aérée */
     overflow-x: hidden;
 }
 
@@ -50,7 +50,6 @@ nav a {
     transition: color 0.3s;
 }
 
-/* Petit effet de soulignement animé */
 nav a::after {
     content: '';
     position: absolute;
@@ -73,14 +72,14 @@ nav a:hover::after {
 /* --- SECTIONS GÉNÉRALES --- */
 .section {
     max-width: 1000px;
-    margin: 100px auto;
+    margin: 100px auto; /* Espace important entre les sections */
     padding: 0 20px;
     position: relative;
 }
 
 h2 {
     color: #6C63FF;
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* Espace sous le titre */
     font-size: 2.5rem;
     position: relative;
     display: inline-block;
@@ -92,24 +91,24 @@ h2::after {
     width: 50%;
     height: 4px;
     background: #FFD166;
-    margin-top: 5px;
+    margin-top: 10px;
     border-radius: 2px;
 }
 
 h3 {
     color: #444;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Espace sous les sous-titres */
     font-size: 1.5rem;
 }
 
 /* --- PRÉSENTATION (Photo 1) --- */
 .apropos-container {
     display: flex;
-    gap: 50px;
+    gap: 60px; /* Espace entre la photo et le texte */
     align-items: center;
     flex-wrap: wrap;
     background: white;
-    padding: 40px;
+    padding: 50px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
@@ -138,6 +137,12 @@ h3 {
 .apropos-text {
     flex: 2;
     min-width: 300px;
+}
+
+/* Espacement des paragraphes */
+.apropos-text p {
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 .apropos-text ul {
@@ -172,11 +177,16 @@ h3 {
 .pourquoi-content {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 60px; /* Espace entre photo et texte */
 }
 
 .pourquoi-text {
     flex: 1;
+}
+
+.pourquoi-text p {
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 .pourquoi-img {
@@ -267,6 +277,11 @@ h3 {
 #objectifs h3 {
     color: #6C63FF;
     margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#objectifs p {
+    margin-bottom: 20px;
 }
 
 /* --- CONTACT --- */
@@ -290,7 +305,7 @@ h3 {
 
 #contact p {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 #contact a {
@@ -347,6 +362,7 @@ footer {
     .apropos-container {
         flex-direction: column;
         text-align: center;
+        padding: 30px;
     }
 
     .apropos-text ul {
