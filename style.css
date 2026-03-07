@@ -99,13 +99,14 @@ h3 {
     color: #444;
     margin-bottom: 20px; /* Espace sous les sous-titres */
     font-size: 1.5rem;
+    margin-top: 30px;
 }
 
 /* --- PRÉSENTATION (Photo 1) --- */
 .apropos-container {
     display: flex;
     gap: 60px; /* Espace entre la photo et le texte */
-    align-items: center;
+    align-items: flex-start; /* Alignement en haut */
     flex-wrap: wrap;
     background: white;
     padding: 50px;
@@ -139,15 +140,17 @@ h3 {
     min-width: 300px;
 }
 
-/* Espacement des paragraphes */
+/* Espacement des paragraphes (IMPORTANT) */
 .apropos-text p {
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Espace entre les paragraphes */
     text-align: justify;
+    font-size: 1.05rem;
 }
 
 .apropos-text ul {
     list-style: none;
     margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .apropos-text li {
@@ -185,8 +188,9 @@ h3 {
 }
 
 .pourquoi-text p {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: justify;
+    font-size: 1.05rem;
 }
 
 .pourquoi-img {
@@ -207,6 +211,24 @@ h3 {
 .pourquoi-img img:hover {
     box-shadow: 5px 5px 0px #6C63FF;
     transform: translate(5px, 5px);
+}
+
+/* --- IMAGES DATA INTERNET --- */
+.data-image-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.data-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.data-image-container img:hover {
+    transform: scale(1.02);
 }
 
 /* --- COMPÉTENCES --- */
@@ -281,7 +303,7 @@ h3 {
 }
 
 #objectifs p {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 /* --- CONTACT --- */
