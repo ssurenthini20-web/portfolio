@@ -11,13 +11,13 @@ body {
     color: #333;
     line-height: 1.8;
     overflow-x: hidden;
-    scroll-behavior: smooth; /* Défilement fluide */
+    scroll-behavior: smooth;
 }
 
 /* --- HEADER --- */
 header {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px); /* Effet verre */
+    backdrop-filter: blur(10px);
     color: #333;
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,6 @@ header {
     position: relative;
 }
 
-/* Animation sous le logo */
 .logo::after {
     content: '';
     position: absolute;
@@ -222,4 +221,18 @@ h3 {
 .pourquoi-text p {
     margin-bottom: 25px;
     text-align: justify;
-    font-size: 1.0
+    font-size: 1.05rem;
+}
+
+.pourquoi-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.pourquoi-img img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow:
