@@ -1,8 +1,6 @@
-/* ============================================ 
-   PORTFOLIO SURENTHINI SIVAKUMAR - CSS COMPLET
+/* ============================================
+   RESET & BASE
    ============================================ */
-
-/* --- RESET & BASE --- */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +16,9 @@ body {
     scroll-behavior: smooth;
 }
 
-/* --- HEADER --- */
+/* ============================================
+   HEADER
+   ============================================ */
 header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -94,7 +94,9 @@ nav a:hover::before {
     width: 100%;
 }
 
-/* --- SECTIONS GÉNÉRALES --- */
+/* ============================================
+   SECTIONS GÉNÉRALES
+   ============================================ */
 .section {
     max-width: 1000px;
     margin: 100px auto;
@@ -129,7 +131,9 @@ h3 {
     font-weight: 600;
 }
 
-/* --- PRÉSENTATION --- */
+/* ============================================
+   PRÉSENTATION
+   ============================================ */
 .apropos-container {
     display: flex;
     gap: 60px;
@@ -212,11 +216,13 @@ h3 {
 }
 
 .info-card:hover {
-    transform: translateX(10px);
-    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.15);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.1);
 }
 
-/* --- POURQUOI DATA --- */
+/* ============================================
+   POURQUOI DATA
+   ============================================ */
 #pourquoi {
     background: linear-gradient(to right, #fdfcfb 50%, #f4f4f4 50%);
     padding: 60px 40px;
@@ -263,7 +269,7 @@ h3 {
 }
 
 /* ============================================
-   COMPÉTENCES - DESIGN INTERACTIF
+   COMPÉTENCES (AVEC BARRES DE PROGRESSION)
    ============================================ */
 #competences {
     background: linear-gradient(135deg, #6C63FF 0%, #5a52d4 100%);
@@ -271,7 +277,7 @@ h3 {
     border-radius: 20px;
     margin: 100px auto;
     max-width: 1100px;
-    box-shadow: 0 10px 40px rgba(108, 99, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.2);
 }
 
 #competences h2 {
@@ -284,104 +290,67 @@ h3 {
 
 .competences-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .competence {
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
     padding: 30px 20px;
     text-align: center;
     border-radius: 15px;
     font-weight: 600;
     color: #555;
-    border: 2px solid transparent;
-    transition: all 0.4s ease;
-    cursor: pointer;
+    border: 2px solid #eee;
+    transition: all 0.3s ease;
+    cursor: default;
     position: relative;
     overflow: hidden;
 }
 
-.competence::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #6C63FF, #FFD166);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 0;
-}
-
-.competence:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.3);
-    border-color: #6C63FF;
-}
-
-.competence:hover::before {
-    opacity: 1;
-}
-
 .competence i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #6C63FF;
     margin-bottom: 15px;
-    position: relative;
-    z-index: 1;
-    transition: transform 0.4s ease;
-}
-
-.competence:hover i {
-    transform: rotate(360deg);
 }
 
 .competence span {
+    display: block;
     font-size: 1.1rem;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 15px;
+}
+
+.competence:hover {
+    background: #6C63FF;
+    color: white;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.4);
+    border-color: #6C63FF;
+}
+
+.competence:hover i {
+    color: white;
 }
 
 .progress-bar {
     width: 100%;
     height: 8px;
     background: #e0e0e0;
-    border-radius: 10px;
-    margin-top: 15px;
+    border-radius: 4px;
     overflow: hidden;
-    position: relative;
-    z-index: 1;
+    margin-top: 10px;
 }
 
 .progress {
     height: 100%;
     background: linear-gradient(90deg, #6C63FF, #FFD166);
-    border-radius: 10px;
-    transition: width 1.5s ease;
-    position: relative;
-}
-
-.progress::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    border-radius: 4px;
+    transition: width 1.5s ease-in-out;
 }
 
 /* ============================================
-   SAÉ - CARTE 3D INTERACTIVE
+   SAÉ (CARTE 3D)
    ============================================ */
 #sae {
     background: white;
@@ -389,14 +358,14 @@ h3 {
     border-radius: 20px;
     margin: 100px auto;
     max-width: 1100px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .projets-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .projet-card {
@@ -406,7 +375,7 @@ h3 {
     border-radius: 20px;
     border-left: 5px solid #FF7F50;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -420,32 +389,27 @@ h3 {
     height: 100%;
     background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(255, 209, 102, 0.1));
     opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 0;
-}
-
-.projet-card:hover {
-    transform: translateY(-15px) rotateX(5deg);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: opacity 0.3s ease;
 }
 
 .projet-card:hover::before {
     opacity: 1;
 }
 
-.card-icon {
-    font-size: 2.5rem;
-    color: #FF7F50;
-    margin-bottom: 15px;
-    transition: transform 0.4s ease;
-}
-
-.projet-card:hover .card-icon {
-    transform: scale(1.2) rotate(10deg);
+.projet-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 .projet-card h3 {
     color: #FF7F50;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.projet-card p {
+    color: #666;
     margin-bottom: 15px;
     position: relative;
     z-index: 1;
@@ -459,13 +423,16 @@ h3 {
     z-index: 1;
 }
 
-.projet-card p {
+.card-icon {
+    font-size: 2rem;
+    color: #6C63FF;
+    margin-bottom: 15px;
     position: relative;
     z-index: 1;
 }
 
 /* ============================================
-   OBJECTIFS - TIMELINE VERTICALE
+   OBJECTIFS (TIMELINE)
    ============================================ */
 #objectifs {
     background: linear-gradient(135deg, #fdfcfb 0%, #f4f4f4 100%);
@@ -473,38 +440,73 @@ h3 {
     border-radius: 20px;
     margin: 100px auto;
     max-width: 1100px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .timeline {
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 20px 0;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
     width: 4px;
-    height: 100%;
     background: linear-gradient(to bottom, #6C63FF, #FFD166);
-    border-radius: 2px;
+    transform: translateX(-50%);
 }
 
 .timeline-item {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     position: relative;
 }
 
 .timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
     flex-direction: row-reverse;
 }
 
 .timeline-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(
+    background: #6C63FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+.timeline-content {
+    width: 45%;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.15);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-item:nth-child
