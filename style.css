@@ -9,7 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #fdfcfb;
     color: #333;
-    line-height: 1.8; /* Ligne plus aérée */
+    line-height: 1.8;
     overflow-x: hidden;
 }
 
@@ -72,14 +72,14 @@ nav a:hover::after {
 /* --- SECTIONS GÉNÉRALES --- */
 .section {
     max-width: 1000px;
-    margin: 100px auto; /* Espace important entre les sections */
+    margin: 100px auto;
     padding: 0 20px;
     position: relative;
 }
 
 h2 {
     color: #6C63FF;
-    margin-bottom: 40px; /* Espace sous le titre */
+    margin-bottom: 40px;
     font-size: 2.5rem;
     position: relative;
     display: inline-block;
@@ -97,7 +97,7 @@ h2::after {
 
 h3 {
     color: #444;
-    margin-bottom: 20px; /* Espace sous les sous-titres */
+    margin-bottom: 20px;
     font-size: 1.5rem;
     margin-top: 30px;
 }
@@ -105,8 +105,8 @@ h3 {
 /* --- PRÉSENTATION (Photo 1) --- */
 .apropos-container {
     display: flex;
-    gap: 60px; /* Espace entre la photo et le texte */
-    align-items: flex-start; /* Alignement en haut */
+    gap: 60px;
+    align-items: flex-start;
     flex-wrap: wrap;
     background: white;
     padding: 50px;
@@ -140,9 +140,8 @@ h3 {
     min-width: 300px;
 }
 
-/* Espacement des paragraphes (IMPORTANT) */
 .apropos-text p {
-    margin-bottom: 25px; /* Espace entre les paragraphes */
+    margin-bottom: 25px;
     text-align: justify;
     font-size: 1.05rem;
 }
@@ -180,7 +179,7 @@ h3 {
 .pourquoi-content {
     display: flex;
     align-items: center;
-    gap: 60px; /* Espace entre photo et texte */
+    gap: 60px;
 }
 
 .pourquoi-text {
@@ -204,31 +203,13 @@ h3 {
     height: 250px;
     object-fit: cover;
     border-radius: 20px;
-    box-shadow: 15px 15px 0px #6C63FF; /* Effet graphique moderne */
+    box-shadow: 15px 15px 0px #6C63FF;
     transition: all 0.3s ease;
 }
 
 .pourquoi-img img:hover {
     box-shadow: 5px 5px 0px #6C63FF;
     transform: translate(5px, 5px);
-}
-
-/* --- IMAGES DATA INTERNET --- */
-.data-image-container {
-    margin: 30px 0;
-    text-align: center;
-}
-
-.data-image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.data-image-container img:hover {
-    transform: scale(1.02);
 }
 
 /* --- COMPÉTENCES --- */
@@ -241,164 +222,4 @@ h3 {
 
 .competence {
     background: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 15px;
-    font-weight: 600;
-    color: #555;
-    border: 2px solid #eee;
-    transition: all 0.3s ease;
-    cursor: default;
-}
-
-.competence:hover {
-    background: #6C63FF;
-    color: white;
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
-    border-color: #6C63FF;
-}
-
-/* --- PROJETS (SAÉ) --- */
-.projets-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.projet-card {
-    background: white;
-    color: #333;
-    padding: 30px;
-    border-radius: 20px;
-    border-left: 5px solid #FF7F50;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.projet-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-.projet-card h3 {
-    color: #FF7F50;
-    margin-bottom: 15px;
-}
-
-.projet-card ul {
-    margin: 15px 0;
-    padding-left: 20px;
-    color: #666;
-}
-
-/* --- OBJECTIFS --- */
-#objectifs h3 {
-    color: #6C63FF;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-#objectifs p {
-    margin-bottom: 25px;
-}
-
-/* --- CONTACT --- */
-#contact {
-    text-align: center;
-    background: #6C63FF;
-    color: white;
-    border-radius: 20px;
-    padding: 60px 20px;
-    margin: 100px auto;
-    max-width: 1000px;
-}
-
-#contact h2 {
-    color: white;
-}
-
-#contact h2::after {
-    background: white;
-}
-
-#contact p {
-    font-size: 1.2rem;
-    margin: 15px 0;
-}
-
-#contact a {
-    color: #FFD166;
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
-}
-
-#contact a:hover {
-    border-bottom: 2px solid #FFD166;
-}
-
-/* --- FOOTER --- */
-footer {
-    background: #333;
-    color: #aaa;
-    text-align: center;
-    padding: 30px;
-    margin-top: 0;
-    font-size: 0.9rem;
-}
-
-/* --- ANIMATIONS --- */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --- RESPONSIVE --- */
-@media(max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-    
-    nav ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 5px 10px;
-    }
-
-    .apropos-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
-    }
-
-    .apropos-text ul {
-        text-align: left;
-        display: inline-block;
-    }
-
-    #pourquoi {
-        background: #fdfcfb;
-        padding: 40px 20px;
-    }
-
-    .pourquoi-content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+    padding
