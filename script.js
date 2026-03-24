@@ -1,13 +1,19 @@
+// script.js
+
 document.addEventListener("DOMContentLoaded", () => {
-    // Animation fade-in au scroll
+    /*
+     * 1) Animation des sections .fade-in avec IntersectionObserver
+     *    -> ajoute la classe .visible une seule fois
+     */
     const faders = document.querySelectorAll(".fade-in");
 
     const observer = new IntersectionObserver(
-        entries => {
+        (entries, observerInstance) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
+                    // On arrête d'observer cette section (l'animation ne se rejoue pas)
+                    observerInstance.unobserve(entry.target);
                 }
             });
         },
@@ -16,7 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     faders.forEach(el => observer.observe(el));
 
-    // Cartes extensibles (expandable)
+    /*
+     * 2) Cartes extensibles (accordéon) pour .expandable
+     *    -> clic sur .info-header ouvre / ferme le contenu
+     */
     const expandableCards = document.querySelectorAll(".expandable");
 
     expandableCards.forEach(card => {
@@ -24,26 +33,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const content = card.querySelector(".info-content");
         const icon = card.querySelector(".toggle-icon");
 
-        if (header && content) {
-            // par défaut : fermé
-            content.style.maxHeight = "0px";
-            content.style.overflow = "hidden";
+        // Sécurité : on vérifie que les éléments existent bien
+        if (!header || !content) return;
 
-            header.addEventListener("click", () => {
-                const isOpen = card.classList.contains("open");
+        // Initialisation : fermé au départ
+        content.style.maxHeight = "0px";
+        content.style.overflow = "hidden";
 
-                if (isOpen) {
-                    // fermer
-                    card.classList.remove("open");
-                    content.style.maxHeight = "0px";
-                    if (icon) icon.classList.remove("rotated");
-                } else {
-                    // ouvrir
-                    card.classList.add("open");
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    if (icon) icon.classList.add("rotated");
-                }
-            });
-        }
+        header.addEventListener("click", () => {
+            const isOpen = card.classList.contains("open");
+
+            if (isOpen) {
+                // Fermer la carte
+                card.classList.remove("open");
+                content.style.maxHeight = "0px";
+                if (icon) icon.classList.remove("rotated");
+            } else {
+                // Ouvrir la carte
+                card.classList.add("open");
+                // On adapte la hauteur au contenu
+                content.style.maxHeight = content.scrollHeight + "px";
+                if (icon) icon.classList.add("rotated");
+            }
+        });
     });
 });
