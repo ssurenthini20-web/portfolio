@@ -3,189 +3,331 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Surenthini SIVAKUMAR | Portfolio Data Analyst</title>
+  <title>Surenthini SIVAKUMAR | Data Analyst Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Particules canvas background -->
+  <canvas id="particles-canvas"></canvas>
+  
+  <!-- Cursor personnalisé -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
 
-<header>
-  <div class="logo">
-    <i class="fas fa-chart-line" style="margin-right: 8px;"></i>
-    Surenthini SIVAKUMAR
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#apropos">À propos</a></li>
-      <li><a href="#parcours">Parcours</a></li>
-      <li><a href="#competences">Compétences</a></li>
-      <li><a href="#projets">Projets & SAÉ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- À propos -->
-<section id="apropos" class="section fade-in">
-  <div class="apropos-container">
-    <div class="apropos-photo">
-      <img src="photo.JPG" alt="Surenthini SIVAKUMAR">
+  <header>
+    <div class="logo">
+      <i class="fas fa-chart-line"></i>
+      <span>Surenthini SIVAKUMAR</span>
     </div>
-    <div class="apropos-text">
+    <nav>
+      <ul>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets & SAÉ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-database"></i> Data Analyst in progress
+      </div>
+      <h1 class="glitch-text" data-text="Surenthini SIVAKUMAR">Surenthini SIVAKUMAR</h1>
+      <p class="hero-subtitle">Transformer les données en décisions impactantes</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Projets Data</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">7</span>
+          <span class="stat-label">Langages & Outils</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Passion Data</span>
+        </div>
+      </div>
+      <a href="#contact" class="cta-button">
+        <span>Me contacter</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+    <div class="hero-visual">
+      <div class="data-sphere"></div>
+      <div class="code-rain"></div>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="apropos" class="section fade-in">
+    <div class="section-header">
+      <span class="section-tag">Qui suis-je ?</span>
       <h2>À propos de moi</h2>
-      <p>Moi c'est <strong>Surenthini SIVAKUMAR</strong>. J'ai 20 ans et je suis actuellement en deuxième année de Bachelor Universitaire de Technologie (BUT) en Science des Données à l'Institut Universitaire de Technologie de Villetaneuse. J'adore explorer les chiffres, jouer avec des datasets et découvrir des petites tendances cachées dans les données.</p>
-      <p>Au départ, je voulais devenir infirmière, parce que j'aime aider les gens. J'ai fait des stages en crèche, maternelle et EHPAD, mais j'ai vite compris que ce n'était pas fait pour moi. Par contre, les maths ont toujours été un de mes points forts et mes professeurs m'ont encouragée à explorer les sciences des données.</p>
-      <p>Le début n'a pas été facile, surtout en venant d'un bac pro, mais avec de la motivation et beaucoup de travail, j'ai pris confiance. J'ai appris à analyser, programmer et résoudre des problèmes, et maintenant je kiffe utiliser Python, R, SQL et Excel pour faire parler les données.</p>
-      <p>Mon objectif : devenir <strong>analyste de données dans le secteur médical</strong>. Pouvoir aider les professionnels de santé à prendre de meilleures décisions grâce aux données, ça me motive vraiment !</p>
+      <div class="section-line"></div>
     </div>
-  </div>
-</section>
+    <div class="apropos-container glass-card">
+      <div class="apropos-photo">
+        <div class="photo-frame">
+          <img src="photo.JPG" alt="Surenthini SIVAKUMAR">
+          <div class="photo-glow"></div>
+        </div>
+      </div>
+      <div class="apropos-text">
+        <p>Moi c'est <strong>Surenthini SIVAKUMAR</strong>. J'ai 20 ans et je suis actuellement en deuxième année de Bachelor Universitaire de Technologie (BUT) en Science des Données à l'Institut Universitaire de Technologie de Villetaneuse. J'adore explorer les chiffres, jouer avec des datasets et découvrir des petites tendances cachées dans les données.</p>
+        <p>Au départ, je voulais devenir infirmière, parce que j'aime aider les gens. J'ai fait des stages en crèche, maternelle et EHPAD, mais j'ai vite compris que ce n'était pas fait pour moi. Par contre, les maths ont toujours été un de mes points forts et mes professeurs m'ont encouragée à explorer les sciences des données.</p>
+        <p>Le début n'a pas été facile, surtout en venant d'un bac pro, mais avec de la motivation et beaucoup de travail, j'ai pris confiance. J'ai appris à analyser, programmer et résoudre des problèmes, et maintenant je kiffe utiliser Python, R, SQL et Excel pour faire parler les données.</p>
+        <p>Mon objectif : devenir <strong>analyste de données dans le secteur médical</strong>. Pouvoir aider les professionnels de santé à prendre de meilleures décisions grâce aux données, ça me motive vraiment !</p>
+      </div>
+    </div>
+  </section>
 
-<!-- Parcours -->
-<section id="parcours" class="section fade-in">
-  <h2>Mon Parcours</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <span class="timeline-date">2024 - Présent</span>
-      <h3>BUT Sciences des données, 2ème année</h3>
-      <p>Université Sorbonne Paris Nord, Villetaneuse</p>
+  <!-- Parcours -->
+  <section id="parcours" class="section fade-in">
+    <div class="section-header">
+      <span class="section-tag">Mon parcours</span>
+      <h2>Parcours & Formation</h2>
+      <div class="section-line"></div>
     </div>
-    <div class="timeline-item">
-      <span class="timeline-date">2020 - 2023</span>
-      <h3>BAC PRO ASSP</h3>
-      <p>Accompagnement, Soins et Services à la Personne - Mention Très bien<br>Lycée Blaise Pascal, Villemomble</p>
+    <div class="timeline">
+      <div class="timeline-item glass-card">
+        <span class="timeline-date">2024 - Présent</span>
+        <h3>BUT Sciences des données, 2ème année</h3>
+        <p>Université Sorbonne Paris Nord, Villetaneuse</p>
+      </div>
+      <div class="timeline-item glass-card">
+        <span class="timeline-date">2020 - 2023</span>
+        <h3>BAC PRO ASSP</h3>
+        <p>Accompagnement, Soins et Services à la Personne - Mention Très bien<br>Lycée Blaise Pascal, Villemomble</p>
+      </div>
+      <div class="timeline-item glass-card">
+        <span class="timeline-date">Septembre 2026</span>
+        <h3>Alternance en Data Science</h3>
+        <p>Recherche d'une alternance de 12 mois pour approfondir mes compétences en traitement de données</p>
+      </div>
+      <div class="timeline-item glass-card">
+        <span class="timeline-date">Objectif à long terme</span>
+        <h3>Data Analyst santé</h3>
+        <p>Poursuite d'études en Master pour produire des prédictions impactantes dans la prise de décision médicale</p>
+      </div>
     </div>
-    <div class="timeline-item">
-      <span class="timeline-date">Septembre 2026</span>
-      <h3>Alternance en Data Science</h3>
-      <p>Recherche d'une alternance de 12 mois pour approfondir mes compétences en traitement de données</p>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date">Objectif à long terme</span>
-      <h3>Data Analyst santé</h3>
-      <p>Poursuite d'études en Master pour produire des prédictions impactantes dans la prise de décision médicale</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Compétences -->
-<section id="competences" class="section fade-in">
-  <h2>Mes Compétences</h2>
-  <div class="competences-grid">
-    <div class="competence">Python</div>
-    <div class="competence">R</div>
-    <div class="competence">SQL</div>
-    <div class="competence">Excel & Power BI</div>
-    <div class="competence">Machine Learning</div>
-    <div class="competence">Statistiques & Modélisation</div>
-  </div>
-</section>
+  <!-- Compétences -->
+  <section id="competences" class="section fade-in">
+    <div class="section-header">
+      <span class="section-tag">Mes outils</span>
+      <h2>Compétences techniques</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="competences-grid">
+      <div class="competence-card glass-card">
+        <i class="fab fa-python"></i>
+        <span>Python</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+      </div>
+      <div class="competence-card glass-card">
+        <i class="fab fa-r-project"></i>
+        <span>R</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+      </div>
+      <div class="competence-card glass-card">
+        <i class="fas fa-database"></i>
+        <span>SQL</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+      </div>
+      <div class="competence-card glass-card">
+        <i class="fas fa-chart-line"></i>
+        <span>Excel & Power BI</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+      </div>
+      <div class="competence-card glass-card">
+        <i class="fas fa-brain"></i>
+        <span>Machine Learning</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+      </div>
+      <div class="competence-card glass-card">
+        <i class="fas fa-chart-bar"></i>
+        <span>Statistiques</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+      </div>
+    </div>
+  </section>
 
-<!-- Projets -->
-<section id="projets" class="section fade-in">
-  <h2>Projets académiques & Réalisations</h2>
-  <div class="projets-grid">
-    <div class="projet-card">
-      <h3>📊 SAÉ 3.EMS.01 – Recueil et analyse de données</h3>
-      <p>Analyse de la perception des étudiants sur l'impact de l'intelligence artificielle dans leurs études et préparation au monde professionnel.</p>
-      <ul>
-        <li>Questionnaire diffusé aux étudiants</li>
-        <li>Sous-problématique : dans quelle mesure l'IA améliore la préparation professionnelle ?</li>
-        <li>Hypothèses analysées : H32, H37, H40</li>
-      </ul>
+  <!-- Projets avec cartes 3D flip -->
+  <section id="projets" class="section fade-in">
+    <div class="section-header">
+      <span class="section-tag">Réalisations</span>
+      <h2>Projets & SAÉ</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projets-grid">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front glass-card">
+            <i class="fas fa-chart-simple"></i>
+            <h3>SAÉ 3.EMS.01</h3>
+            <p>Recueil et analyse de données</p>
+            <span class="flip-hint">Cliquez pour voir</span>
+          </div>
+          <div class="flip-card-back glass-card">
+            <h3>📊 SAÉ 3.EMS.01</h3>
+            <p>Analyse de la perception des étudiants sur l'impact de l'IA dans leurs études.</p>
+            <ul>
+              <li>Questionnaire diffusé aux étudiants</li>
+              <li>Sous-problématique : préparation professionnelle</li>
+              <li>Hypothèses : H32, H37, H40</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front glass-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Série chronologique</h3>
+            <p>Analyse INSEE</p>
+            <span class="flip-hint">Cliquez pour voir</span>
+          </div>
+          <div class="flip-card-back glass-card">
+            <h3>📈 Analyse INSEE</h3>
+            <p>Analyse d'une série chronologique avec composante saisonnière.</p>
+            <ul>
+              <li>Correction des variations saisonnières (CVS)</li>
+              <li>Prévisions par ajustement linéaire</li>
+              <li>Modélisation ARIMA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front glass-card">
+            <i class="fas fa-cloud-sun"></i>
+            <h3>Événements climatiques</h3>
+            <p>R & Shiny</p>
+            <span class="flip-hint">Cliquez pour voir</span>
+          </div>
+          <div class="flip-card-back glass-card">
+            <h3>🌍 Analyse climatique</h3>
+            <p>Application interactive pour visualiser les événements climatiques en France (2016–2022).</p>
+            <ul>
+              <li>Visualisation sur carte choroplèthe</li>
+              <li>Analyse des données ESWD</li>
+              <li>Prévision du risque</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front glass-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Datamining Santé</h3>
+            <p>SAÉ S4 - OMS</p>
+            <span class="flip-hint">Cliquez pour voir</span>
+          </div>
+          <div class="flip-card-back glass-card">
+            <h3>🏥 SAÉ S4: Datamining</h3>
+            <p>Analyse dataset OMS - Espérance de vie et facteurs économiques/sanitaires.</p>
+            <ul>
+              <li>Nettoyage des données</li>
+              <li>Clustering K-means</li>
+              <li>Régression multiple (en cours)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="projet-card">
-      <h3>📈 Analyse de série chronologique (INSEE)</h3>
-      <p>Analyse d'une série chronologique avec composante saisonnière et prévisions statistiques.</p>
-      <ul>
-        <li>Correction des variations saisonnières (CVS)</li>
-        <li>Prévisions par ajustement linéaire et lissage exponentiel</li>
-        <li>Modélisation avec ARIMA</li>
-      </ul>
+    <!-- Section Internationale avec deux colonnes -->
+    <div class="international-section">
+      <div class="international-card glass-card">
+        <div class="card-icon"><i class="fas fa-globe-americas"></i></div>
+        <h3>Passeport culturel</h3>
+        <p>Arrivée en France il y a 7 ans sans parler français, mon parcours m'a permis de développer une vraie ouverture à l'international et une capacité d'adaptation.</p>
+        <p>Grâce à mes études en BUT Sciences des Données, j'ai participé à plusieurs projets et présentations, notamment en anglais, ce qui m'a permis d'améliorer ma communication dans un contexte international.</p>
+        <p>Je m'intéresse aussi à l'actualité du domaine de la data à travers une veille régulière (articles, conférences, échanges en cours).</p>
+      </div>
+      <div class="international-card glass-card">
+        <div class="card-icon"><i class="fas fa-plane-departure"></i></div>
+        <h3>Semaine internationale à l'IUT</h3>
+        <p><strong>Une expérience unique :</strong> 3 jours de cours 100% anglais avec des professeurs venus du Portugal, Italie, Albanie, Lettonie et Finlande.</p>
+        <p><strong>Ce que j'ai appris :</strong> Python & Pandas, SQL, PHP, IoT, marketing digital, statistiques appliquées.</p>
+        <p>Cette semaine m'a permis de m'adapter à des méthodes d'enseignement différentes et de découvrir une approche internationale de la data.</p>
+        <p><em>Mon ressenti :</em> Très enrichissante, elle m'a donné encore plus envie de progresser en anglais et de m'ouvrir à l'international.</p>
+      </div>
     </div>
 
-    <div class="projet-card">
-      <h3>🌍 Analyse climatique (R & Shiny)</h3>
-      <p>Création d'une application interactive pour explorer et visualiser les événements climatiques en France (2016–2022).</p>
-      <ul>
-        <li>Visualisation sur carte choroplèthe</li>
-        <li>Analyse des données ESWD 2016–2022 (type, intensité, victimes)</li>
-        <li>Prévision du risque d'événements pour des périodes non couvertes</li>
-      </ul>
+    <!-- Objectifs -->
+    <div class="objectifs-block">
+      <div class="objectif-card glass-card">
+        <i class="fas fa-bullseye"></i>
+        <h4>Court terme (1 an)</h4>
+        <p>Valider mon BUT Sciences des Données et progresser en Python, SQL et statistiques. Développer mon aisance à l'oral. Trouver une alternance en analyse de données.</p>
+      </div>
+      <div class="objectif-card glass-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h4>Moyen terme</h4>
+        <p>Poursuivre mes études en Master dans le domaine de la data science ou de l'analyse de données.</p>
+      </div>
+      <div class="objectif-card glass-card">
+        <i class="fas fa-stethoscope"></i>
+        <h4>Long terme (10 ans)</h4>
+        <p>Devenir data analyst dans le domaine médical. Analyser des données de santé pour aider à améliorer les soins et contribuer à des décisions médicales plus efficaces.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- SAÉ Datamining linéaire -->
-  <div class="sae-bonus">
-    <h3><i class="fas fa-database"></i> SAÉ S4: Datamining linéaire – Espérance de vie (OMS)</h3>
-    <p>Dans cette SAÉ, j'ai travaillé sur l'analyse d'un dataset de l'OMS portant sur l'espérance de vie et différents facteurs économiques et sanitaires.</p>
-    <p>J'ai participé au nettoyage des données (gestion des valeurs manquantes, suppression de variables), puis à une analyse exploratoire en dimension 1 et 2 (statistiques, corrélations, visualisations).</p>
-    <p><strong>Nous avons montré que :</strong> la mortalité adulte est fortement liée à l'espérance de vie (relation négative) / le PIB a une influence positive sur la longévité. Nous avons aussi réalisé un clustering (K-means) qui met en évidence trois groupes de pays selon leur niveau de richesse et leur espérance de vie.</p>
-    <p><em>Problématique :</em> Comprendre dans quelle mesure les facteurs économiques et sanitaires expliquent les différences d'espérance de vie entre les pays.</p>
-    <p>La phase 2 est en cours (régression multiple, ACP). Elle va nous permettre d'aller plus loin dans l'analyse, notamment avec une régression linéaire multiple, une classification en dimension plus élevée, et une analyse en composantes principales (ACP).</p>
-    <p>Même si cette partie n'est pas encore terminée, ce projet m'a déjà permis de développer des compétences importantes en analyse de données, en statistiques et en programmation sur Python (notamment avec les notebooks Jupyter). J'ai aussi appris à travailler de manière plus rigoureuse et à mieux structurer une analyse complète, du nettoyage des données jusqu'à l'interprétation des résultats.</p>
-  </div>
+  <!-- Contact -->
+  <section id="contact" class="section fade-in">
+    <div class="section-header">
+      <span class="section-tag">Me contacter</span>
+      <h2>Parlons de vos projets</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-card glass-card">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:s.surenthini20@gmail.com">s.surenthini20@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>+33 6 05 58 60 92</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>16 Rue Frédéric Passy, 93330 Neuilly-sur-Marne</span>
+      </div>
+    </div>
+  </section>
 
-  <!-- Passeport culturel + Semaine internationale -->
-  <div class="culture-international">
-    <div class="culture-card">
-      <h3><i class="fas fa-globe"></i> Passeport culturel & Ouverture</h3>
-      <p>Arrivée en France il y a 7 ans sans parler français, mon parcours m'a permis de développer une vraie ouverture à l'international et une capacité d'adaptation. Grâce à mes études en BUT Sciences des Données, j'ai participé à plusieurs projets et présentations, notamment en anglais, ce qui m'a permis d'améliorer ma communication dans un contexte international.</p>
-      <p>Je m'intéresse aussi à l'actualité du domaine de la data à travers une veille régulière (articles, conférences, échanges en cours). Cela me permet de suivre les évolutions du secteur, en particulier dans le domaine de la santé.</p>
+  <footer>
+    <div class="footer-content">
+      <p><i class="fas fa-chart-simple"></i> &copy; 2026 Surenthini SIVAKUMAR | Portfolio data driven</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-    <div class="culture-card">
-      <h3><i class="fas fa-plane"></i> Semaine internationale à l'IUT</h3>
-      <p>Une expérience unique : 3 jours de cours 100% anglais avec des professeurs venus du Portugal, Italie, Albanie, Lettonie et Finlande.</p>
-      <p><strong>Ce que j'ai appris :</strong> Manipuler des données avec Python et Pandas, écrire des requêtes SQL, découvrir PHP, systèmes IoT, marketing digital, statistiques appliquées.</p>
-      <p>Cette semaine m'a permis de m'adapter à des méthodes d'enseignement différentes, travailler en anglais dans un contexte technique et découvrir une approche internationale de la data. Un vrai déclic pour viser l'international !</p>
-      <p><em>Mon ressenti :</em> Très enrichissante, autant sur le plan technique que personnel. Elle m'a donné encore plus envie de progresser en anglais et de m'ouvrir à l'international.</p>
-    </div>
-  </div>
+  </footer>
 
-  <!-- Objectifs -->
-  <div class="objectifs-block">
-    <div class="objectif-card">
-      <h4>🎯 Court terme (1 an)</h4>
-      <p>Valider mon BUT Sciences des Données et continuer à progresser en Python, SQL et statistiques. Développer mon aisance à l'oral et gagner en confiance. Trouver une alternance dans l'analyse de données.</p>
-    </div>
-    <div class="objectif-card">
-      <h4>📚 Moyen terme (après le BUT)</h4>
-      <p>Poursuivre mes études en Master dans le domaine de la data science ou de l'analyse de données.</p>
-    </div>
-    <div class="objectif-card">
-      <h4>🏥 Long terme (10 ans)</h4>
-      <p>Devenir data analyst dans le domaine médical. Analyser des données de santé pour aider à améliorer les soins et contribuer à des décisions médicales plus efficaces.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="section fade-in">
-  <h2>Contactez-moi</h2>
-  <div class="contact-card">
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:s.surenthini20@gmail.com">s.surenthini20@gmail.com</a>
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-phone-alt"></i>
-      <span>+33 6 05 58 60 92</span>
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>16 Rue Frédéric Passy, 93330 Neuilly-sur-Marne</span>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <i class="fas fa-chart-simple"></i> &copy; 2026 Surenthini SIVAKUMAR | Portfolio data driven
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
