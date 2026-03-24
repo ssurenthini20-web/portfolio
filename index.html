@@ -5,162 +5,357 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Surenthini SIVAKUMAR</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    >
+    //fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    //cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header>
         <div class="logo">Surenthini SIVAKUMAR</div>
         <nav>
             <ul>
-                <li><a href="#presentation">Présentation</a></li>
-                <li><a href="#pourquoi">Pourquoi la data ?</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#sae">SAÉ</a></li>
-                <li><a href="#objectifs">Objectifs</a></li>
-                <li><a href="#contact">Contact</a></li>
+                ><a href="#presentation">Présentation</a></li>
+                ><a href="#pourquoi">Pourquoi la data ?</a></li>
+                ><a href="#competences">Compétences</a></li>
+                ><a href="#sae">SAÉ</a></li>
+                ><a href="#bilan-sae">Bilan compétences SAÉ</a></li>
+                ><a href="#passeport">Passeport culturel</a></li>
+                ><a href="#semaine-int">Semaine internationale</a></li>
+                ><a href="#objectifs">Objectifs</a></li>
+                ><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- PRÉSENTATION -->
+    <!-- HERO -->
+    <section class="hero section fade-in">
+        <div class="hero-content">
+            <h1>Bienvenue dans mon univers data</h1>
+            <p>Étudiante en BUT Sciences des Données, passionnée par l'analyse, les statistiques et la santé.</p>
+            <a href="#presentation" class="btn-primary">Découvrir mon parcours</a>
+        </div>
+        <div class="hero-orbit">
+            <div class="orbit-circle"></div>
+            <div class="orbit-circle orbit-circle-2"></div>
+            <div class="orbit-dot"></div>
+        </div>
+    </section>
+
+    <!-- Présentation -->
     <section id="presentation" class="section fade-in">
-        <div class="apropos-container">
+        <div class="apropos-container glass-card">
             <div class="apropos-photo">
-                <img src="photo1.jpg" alt="Photo Surenthini">
+                <img src="photo1.jpg" alt="Photo Surenthini" class="photo-gauche">
             </div>
             <div class="apropos-text">
-                <h2>BIENVENUE DANS MON UNIVERS...</h2>
-                <div class="info-card">
-                    <h3>À propos de moi</h3>
-                    <p>Je m'appelle <strong>Surenthini SIVAKUMAR</strong>. J'ai 20 ans et je suis actuellement en deuxième année de Bachelor Universitaire de Technologie (BUT) en Science des Données à l'Institut Universitaire de Technologie de Villetaneuse. J'adore explorer les chiffres, jouer avec des datasets et découvrir des petites tendances cachées dans les données.</p>
-                    <p>Au départ, je voulais devenir infirmière, parce que j'aime aider les gens. J'ai fait des stages en crèche, maternelle et EHPAD, mais j'ai vite compris que ce n'était pas fait pour moi. Par contre, les maths ont toujours été un de mes points forts et mes professeurs m'ont encouragée à explorer les sciences des données.</p>
-                    <p>Le début n'a pas été facile, surtout en venant d'un bac pro, mais avec de la motivation et beaucoup de travail, j'ai pris confiance. J'ai appris à analyser, programmer et résoudre des problèmes, et maintenant j'aime utiliser Python, R, SQL, Excel etc.. pour faire parler les données.</p>
-                    <p>Mon objectif est de devenir analyste de données dans le secteur médical. Pouvoir aider les professionnels de santé à prendre de meilleures décisions grâce aux données, ça me motive vraiment !</p>
-                    <p>On me décrit souvent comme une personne organisée, calme, sérieuse et à l'écoute. Je sais travailler en équipe, je suis ponctuelle, impliquée, et je fais toujours de mon mieux. Grâce aux projets réalisés en cours et aux présentations orales, j'ai aussi beaucoup progressé en communication.</p>
+                <h2>BIENVENUE DANS MON UNIVERS</h2>
+
+                <div class="info-card expandable">
+                    <div class="info-header">
+                        <h3>À propos de moi</h3>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="info-content">
+                        <p>
+                            Je m'appelle <strong>Surenthini SIVAKUMAR</strong>. J'ai 20 ans et je suis actuellement en deuxième année de Bachelor Universitaire de Technologie (BUT) en Science des Données à l'Institut Universitaire de Technologie de Villetaneuse. J'adore explorer les chiffres, jouer avec des datasets et découvrir des petites tendances cachées dans les données.
+                        </p>
+                        <p>
+                            Au départ, je voulais devenir infirmière, parce que j'aime aider les gens. J'ai fait des stages en crèche, maternelle et EHPAD, mais j'ai vite compris que ce n'était pas fait pour moi. Par contre, les maths ont toujours été un de mes points forts et mes professeurs m'ont encouragée à explorer les sciences des données.
+                        </p>
+                        <p>
+                            Le début n'a pas été facile, surtout en venant d'un bac pro, mais avec de la motivation et beaucoup de travail, j'ai pris confiance. J'ai appris à analyser, programmer et résoudre des problèmes, et maintenant j'aime utiliser Python, R, SQL, Excel etc.. pour faire parler les données.
+                        </p>
+                        <p>
+                            Mon objectif est de devenir analyste de données dans le secteur médical. Pouvoir aider les professionnels de santé à prendre de meilleures décisions grâce aux données, ça me motive vraiment !
+                        </p>
+                        <p>
+                            On me décrit souvent comme une personne organisée, calme, sérieuse et à l'écoute. Je sais travailler en équipe, je suis ponctuelle, impliquée, et je fais toujours de mon mieux. Grâce aux projets réalisés en cours et aux présentations orales, j'ai aussi beaucoup progressé en communication.
+                        </p>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <h3>Mes compétences</h3>
-                    <ul>
-                        <li>Analyse de données avec Python, R et Excel pour identifier des tendances.</li>
-                        <li>Programmation et gestion de bases de données avec SQL.</li>
-                        <li>Résolution de problèmes et organisation de projets en groupe.</li>
-                        <li>Communication et esprit d'équipe, pour présenter clairement mes résultats.</li>
-                    </ul>
+
+                <div class="info-card expandable">
+                    <div class="info-header">
+                        <h3>Mes compétences</h3>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="info-content">
+                        <ul>
+                            >Analyse de données avec Python, R et Excel pour identifier des tendances.</li>
+                            >Programmation et gestion de bases de données avec SQL.</li>
+                            >Résolution de problèmes et organisation de projets en groupe.</li>
+                            >Communication et esprit d'équipe, pour présenter clairement mes résultats.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="info-card">
-                    <h3>Choix de formation</h3>
-                    <p>Le BUT Sciences des Données, ce n'était pas mon premier choix. Ma première passion était l'infirmerie, mais j'ai découvert que ce domaine permet d'allier rigueur scientifique et impact concret sur la société. Les méthodes statistiques appliquées à des problèmes réels, comme la prévision et l'analyse de données médicales, m'ont passionnée et m'ont donné envie d'approfondir mes connaissances.</p>
-                    <p>Aujourd'hui, je suis convaincue d'avoir fait le bon choix et je souhaite mettre mes compétences au service de la santé, en utilisant les données pour améliorer la vie des patients, combinant ainsi ma volonté d'aider les autres et ma passion pour l'analyse et la programmation.</p>
+
+                <div class="info-card expandable">
+                    <div class="info-header">
+                        <h3>Choix de formation</h3>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="info-content">
+                        <p>
+                            Le BUT Sciences des Données, ce n'était pas mon premier choix. Ma première passion était l'infirmerie, mais j'ai découvert que ce domaine permet d'allier rigueur scientifique et impact concret sur la société. Les méthodes statistiques appliquées à des problèmes réels, comme la prévision et l'analyse de données médicales, m'ont passionnée et m'ont donné envie d'approfondir mes connaissances.
+                        </p>
+                        <p>
+                            Aujourd'hui, je suis convaincue d'avoir fait le bon choix et je souhaite mettre mes compétences au service de la santé, en utilisant les données pour améliorer la vie des patients, combinant ainsi ma volonté d'aider les autres et ma passion pour l'analyse et la programmation.
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- POURQUOI LA DATA -->
+    <!-- Pourquoi data -->
     <section id="pourquoi" class="section fade-in">
         <h2>Pourquoi la science des données ?</h2>
-        <div class="pourquoi-content">
+        <div class="pourquoi-content glass-card">
             <div class="pourquoi-text">
-                <p>Au départ, je souhaitais devenir infirmière car j'aime aider les autres. J'ai réalisé plusieurs stages en crèche, en maternelle et en EHPAD. Cependant, j'ai rapidement compris que ce métier ne correspondait pas totalement à mes attentes.</p>
-                <p>En parallèle, les mathématiques ont toujours été une matière dans laquelle je me sentais à l'aise. Mes professeurs m'ont encouragée à explorer les sciences des données, un domaine qui permet de combiner analyse, statistiques et programmation.</p>
-                <p>Aujourd'hui, je suis convaincue d'avoir trouvé une voie qui me correspond. Mon objectif est d'utiliser l'analyse de données dans le domaine de la santé afin de contribuer à améliorer les décisions médicales.</p>
+                <p>
+                    Au départ, je souhaitais devenir infirmière car j'aime aider les autres. J'ai réalisé plusieurs stages en crèche, en maternelle et en EHPAD. Cependant, j'ai rapidement compris que ce métier ne correspondait pas totalement à mes attentes.
+                </p>
+                <p>
+                    En parallèle, les mathématiques ont toujours été une matière dans laquelle je me sentais à l'aise. Mes professeurs m'ont encouragée à explorer les sciences des données, un domaine qui permet de combiner analyse, statistiques et programmation.
+                </p>
+                <p>
+                    Aujourd'hui, je suis convaincue d'avoir trouvé une voie qui me correspond. Mon objectif est d'utiliser l'analyse de données dans le domaine de la santé afin de contribuer à améliorer les décisions médicales.
+                </p>
             </div>
             <div class="pourquoi-img">
-                <img src="photo2.jpg" alt="Surenthini Data">
+                <img src="photo2.jpg" alt="Surenthini Data" class="photo-droite">
             </div>
         </div>
     </section>
 
-    <!-- COMPÉTENCES -->
+    <!-- Compétences -->
     <section id="competences" class="section fade-in">
         <h2>Mes compétences</h2>
         <div class="competences-grid">
-            <div class="competence"><i class="fab fa-python"></i><span>Python</span><div class="progress-bar"><div class="progress" style="width:85%"></div></div></div>
-            <div class="competence"><i class="fas fa-database"></i><span>R</span><div class="progress-bar"><div class="progress" style="width:75%"></div></div></div>
-            <div class="competence"><i class="fas fa-table"></i><span>SQL</span><div class="progress-bar"><div class="progress" style="width:80%"></div></div></div>
-            <div class="competence"><i class="fas fa-file-excel"></i><span>Excel</span><div class="progress-bar"><div class="progress" style="width:90%"></div></div></div>
-            <div class="competence"><i class="fas fa-chart-bar"></i><span>Statistiques</span><div class="progress-bar"><div class="progress" style="width:85%"></div></div></div>
-            <div class="competence"><i class="fas fa-brain"></i><span>Machine Learning</span><div class="progress-bar"><div class="progress" style="width:70%"></div></div></div>
+            <div class="competence glass-card">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+            </div>
+            <div class="competence glass-card">
+                <i class="fas fa-database"></i>
+                <span>R</span>
+                <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+            </div>
+            <div class="competence glass-card">
+                <i class="fas fa-table"></i>
+                <span>SQL</span>
+                <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+            </div>
+            <div class="competence glass-card">
+                <i class="fas fa-file-excel"></i>
+                <span>Excel</span>
+                <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+            </div>
+            <div class="competence glass-card">
+                <i class="fas fa-chart-bar"></i>
+                <span>Statistiques</span>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+            </div>
+            <div class="competence glass-card">
+                <i class="fas fa-brain"></i>
+                <span>Machine Learning</span>
+                <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+            </div>
         </div>
     </section>
 
-    <!-- SAE (ton contenu exact) -->
+    <!-- SAÉ -->
     <section id="sae" class="section fade-in">
-        <h2>Bilan des Compétences Acquises à partir des SAÉ BUT 2</h2>
-        <div class="glass-card">
-            <h3>SAÉ S4: Datamining linéaire</h3>
-            <p>Dans cette SAÉ, j’ai travaillé sur l’analyse d’un dataset de l’OMS portant sur l’espérance de vie et différents facteurs économiques et sanitaires.</p>
-            <p>J’ai participé au nettoyage des données (gestion des valeurs manquantes, suppression de variables), puis à une analyse exploratoire en dimension 1 et 2 (statistiques, corrélations, visualisations).</p>
-            <p>Nous avons montré que :</p>
-            <ul>
-                <li>la mortalité adulte est fortement liée à l’espérance de vie (relation négative)</li>
-                <li>le PIB a une influence positive sur la longévité</li>
-            </ul>
-            <p>Nous avons aussi réalisé un clustering (K-means) qui met en évidence trois groupes de pays selon leur niveau de richesse et leur espérance de vie.</p>
-            <p>Problématique : Comprendre dans quelle mesure les facteurs économiques et sanitaires expliquent les différences d’espérance de vie entre les pays.</p>
-            <p>La phase 2 est en cours (régression multiple, ACP). Elle va nous permettre d’aller plus loin dans l’analyse, notamment avec :</p>
-            <ul>
-                <li>une régression linéaire multiple</li>
-                <li>une classification en dimension plus élevée</li>
-                <li>une analyse en composantes principales (ACP)</li>
-            </ul>
-            <p>Même si cette partie n’est pas encore terminée, ce projet m’a déjà permis de développer des compétences importantes en analyse de données, en statistiques et en programmation sur Python (notamment avec les notebooks Jupyter). J’ai aussi appris à travailler de manière plus rigoureuse et à mieux structurer une analyse complète, du nettoyage des données jusqu’à l’interprétation des résultats.</p>
+        <h2>Bilan des SAÉ</h2>
+        <div class="projets-grid">
+            <div class="projet-card glass-card expandable">
+                <div class="info-header">
+                    <div class="card-title-icon">
+                        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>SAÉ 301 – Enquête statistique</h3>
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="info-content">
+                    <p>Projet d'analyse de la perception de l'intelligence artificielle chez les étudiants.</p>
+                    <ul>
+                        >Création d'un questionnaire</li>
+                        >Nettoyage et analyse des données</li>
+                        >Interprétation statistique</li>
+                    </ul>
+                    <p>Cette SAÉ m'a permis de comprendre toutes les étapes d'une étude statistique et de développer ma rigueur dans l'analyse de données.</p>
+                </div>
+            </div>
 
-            <h3>Passeport culturel</h3>
-            <p>Arrivée en France il y a 7 ans sans parler français, mon parcours m’a permis de développer une vraie ouverture à l’international et une capacité d’adaptation. Grâce à mes études en BUT Sciences des Données, j’ai participé à plusieurs projets et présentations, notamment en anglais, ce qui m’a permis d’améliorer ma communication dans un contexte international.</p>
-            <p>Je m’intéresse aussi à l’actualité du domaine de la data à travers une veille régulière (articles, conférences, échanges en cours). Cela me permet de suivre les évolutions du secteur, en particulier dans le domaine de la santé.</p>
-
-            <h3>Semaine internationale à l’IUT</h3>
-            <p>Une expérience unique. Dans le cadre de ma formation, j’ai participé à une semaine internationale à l’IUT, avec des professeurs venus de plusieurs pays : Portugal, Italie, Albanie, Lettonie et Finlande. Pendant 3 jours, nous avons suivi des cours 100 % en anglais, ce qui nous a permis de travailler autrement et de sortir de notre zone de confort.</p>
-            <p>Ce que j’ai appris:</p>
-            <ul>
-                <li>Manipuler des données avec Python et Pandas</li>
-                <li>Écrire des requêtes en SQL</li>
-                <li>Découvrir les bases de PHP</li>
-                <li>Comprendre les systèmes IoT (objets connectés)</li>
-                <li>Utiliser des outils de marketing digital</li>
-                <li>Appliquer des méthodes de statistiques</li>
-            </ul>
-            <p>Mon ressenti : Une semaine très enrichissante, autant sur le plan technique que personnel. Elle m’a donné encore plus envie de progresser en anglais et de m’ouvrir à l’international.</p>
+            <div class="projet-card glass-card expandable">
+                <div class="info-header">
+                    <div class="card-title-icon">
+                        <div class="card-icon"><i class="fas fa-chart-area"></i></div>
+                        <h3>SAÉ 303 – Analyse de séries temporelles</h3>
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="info-content">
+                    <p>Analyse de l'évolution du nombre de nuitées touristiques en France.</p>
+                    <ul>
+                        >Correction de la saisonnalité</li>
+                        >Prévisions statistiques</li>
+                        >Modélisation ARIMA</li>
+                    </ul>
+                    <p>Ce projet m'a permis de comprendre l'importance des modèles statistiques pour prévoir l'évolution de données dans le temps.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- OBJECTIFS -->
+    <!-- Bilan compétences SAÉ Datamining -->
+    <section id="bilan-sae" class="section fade-in">
+        <h2>Bilan des compétences SAÉ BUT 2</h2>
+        <div class="glass-card expandable">
+            <div class="info-header">
+                <h3>SAÉ S4 : Datamining linéaire</h3>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="info-content">
+                <p>
+                    Dans cette SAÉ, j’ai travaillé sur l’analyse d’un dataset de l’OMS portant sur l’espérance de vie et différents facteurs économiques et sanitaires.
+                </p>
+                <p>
+                    J’ai participé au nettoyage des données (gestion des valeurs manquantes, suppression de variables), puis à une analyse exploratoire en dimension 1 et 2 (statistiques, corrélations, visualisations).
+                </p>
+                <p>
+                    Nous avons montré que :
+                    <br>• la mortalité adulte est fortement liée à l’espérance de vie (relation négative)
+                    <br>• le PIB a une influence positive sur la longévité
+                </p>
+                <p>
+                    Nous avons aussi réalisé un clustering (K-means) qui met en évidence trois groupes de pays selon leur niveau de richesse et leur espérance de vie.
+                </p>
+                <p>
+                    Problématique : Comprendre dans quelle mesure les facteurs économiques et sanitaires expliquent les différences d’espérance de vie entre les pays.
+                </p>
+                <p>
+                    La phase 2 est en cours (régression multiple, ACP). Elle va nous permettre d’aller plus loin dans l’analyse, notamment avec :
+                    une régression linéaire multiple, une classification en dimension plus élevée, et une analyse en composantes principales (ACP).
+                </p>
+                <p>
+                    Même si cette partie n’est pas encore terminée, ce projet m’a déjà permis de développer des compétences importantes en analyse de données, en statistiques et en programmation sur Python (notamment avec les notebooks Jupyter). J’ai aussi appris à travailler de manière plus rigoureuse et à mieux structurer une analyse complète, du nettoyage des données jusqu’à l’interprétation des résultats.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Passeport culturel -->
+    <section id="passeport" class="section fade-in">
+        <h2>Passeport culturel</h2>
+        <div class="glass-card expandable">
+            <div class="info-header">
+                <h3>Mon ouverture internationale</h3>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="info-content">
+                <p>
+                    Arrivée en France il y a 7 ans sans parler français, mon parcours m’a permis de développer une vraie ouverture à l’international et une capacité d’adaptation. Grâce à mes études en BUT Sciences des Données, j’ai participé à plusieurs projets et présentations, notamment en anglais, ce qui m’a permis d’améliorer ma communication dans un contexte international.
+                </p>
+                <p>
+                    Je m’intéresse aussi à l’actualité du domaine de la data à travers une veille régulière (articles, conférences, échanges en cours). Cela me permet de suivre les évolutions du secteur, en particulier dans le domaine de la santé.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Semaine internationale -->
+    <section id="semaine-int" class="section fade-in">
+        <h2>Semaine internationale à l’IUT</h2>
+        <div class="glass-card expandable">
+            <div class="info-header">
+                <h3>Une expérience unique</h3>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="info-content">
+                <p>
+                    Dans le cadre de ma formation, j’ai participé à une semaine internationale à l’IUT, avec des professeurs venus de plusieurs pays : Portugal, Italie, Albanie, Lettonie et Finlande. Pendant 3 jours, nous avons suivi des cours 100 % en anglais, ce qui nous a permis de travailler autrement et de sortir de notre zone de confort.
+                </p>
+                <p><strong>Ce que j’ai appris :</strong></p>
+                <ul>
+                    >Manipuler des données avec Python et Pandas</li>
+                    >Écrire des requêtes en SQL</li>
+                    >Découvrir les bases de PHP</li>
+                    >Comprendre les systèmes IoT (objets connectés)</li>
+                    >Utiliser des outils de marketing digital</li>
+                    >Appliquer des méthodes de statistiques</li>
+                </ul>
+                <p><strong>Ce que cette expérience m’a apporté :</strong></p>
+                <p>
+                    Cette semaine m’a permis de m’adapter à des méthodes d’enseignement différentes, de travailler en anglais dans un contexte technique, et de découvrir une approche internationale de la data. J’ai compris que la data se travaille partout dans le monde, mais avec des approches différentes.
+                </p>
+                <p><strong>Mon ressenti :</strong></p>
+                <p>
+                    Une semaine très enrichissante, autant sur le plan technique que personnel. Elle m’a donné encore plus envie de progresser en anglais et de m’ouvrir à l’international.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectifs -->
     <section id="objectifs" class="section fade-in">
-        <h2>Mes objectifs</h2>
+        <h2>Objectifs professionnels</h2>
         <div class="timeline">
-            <div class="timeline-item">
-                <h3>Court terme (1 an)</h3>
-                <p>Valider mon BUT Sciences des Données et continuer à progresser en Python, SQL et statistiques. Je souhaite aussi développer mon aisance à l’oral et gagner en confiance. Trouver une alternance dans le domaine de l'analyse de données afin de développer mes compétences dans un contexte professionnel.</p>
+
+            <div class="timeline-item glass-card">
+                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-content">
+                    <h3>Court terme</h3>
+                    <p>Valider mon BUT Sciences des Données et continuer à progresser en Python, SQL et statistiques. Je souhaite aussi développer mon aisance à l’oral et gagner en confiance. Trouver une alternance dans le domaine de l'analyse de données afin de développer mes compétences dans un contexte professionnel.</p>
+                </div>
             </div>
-            <div class="timeline-item">
-                <h3>Moyen terme (après le BUT)</h3>
-                <p>Poursuivre mes études en Master dans le domaine de la data science ou de l'analyse de données.</p>
+
+            <div class="timeline-item glass-card">
+                <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="timeline-content">
+                    <h3>Moyen terme</h3>
+                    <p>Poursuivre mes études en Master dans le domaine de la data science ou de l'analyse de données.</p>
+                </div>
             </div>
-            <div class="timeline-item">
-                <h3>Long terme (10 ans)</h3>
-                <p>Devenir data analyst dans le domaine médical. Mon objectif est d’analyser des données de santé pour aider à améliorer les soins et contribuer à des décisions médicales plus efficaces.</p>
+
+            <div class="timeline-item glass-card">
+                <div class="timeline-icon"><i class="fas fa-rocket"></i></div>
+                <div class="timeline-content">
+                    <h3>Long terme</h3>
+                    <p>Devenir data analyst dans le domaine médical. Mon objectif est d’analyser des données de santé pour aider à améliorer les soins et contribuer à des décisions médicales plus efficaces.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- Contact -->
     <section id="contact" class="section fade-in">
         <h2>Contact</h2>
         <div class="contact-container">
-            <div class="contact-card"><i class="fas fa-envelope"></i>Email : <a href="mailto:s.surenthini20@gmail.com">s.surenthini20@gmail.com</a></div>
-            <div class="contact-card"><i class="fas fa-phone"></i>Téléphone : 06 05 58 60 92</div>
-            <div class="contact-card"><i class="fas fa-map-marker-alt"></i>Adresse : Neuilly-sur-Marne</div>
+            <div class="contact-card glass-card">
+                <i class="fas fa-envelope"></i>
+                <p>Email : <a href="mailto:s.surenthini20@gmail.com">s.surenthini20@gmail.com</a></p>
+            </div>
+            <div class="contact-card glass-card">
+                <i class="fas fa-phone"></i>
+                <p>Téléphone : 06 05 58 60 92</p>
+            </div>
+            <div class="contact-card glass-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Adresse : Neuilly-sur-Marne</p>
+            </div>
         </div>
     </section>
 
-    <footer>© 2026 Surenthini SIVAKUMAR</footer>
+    <footer>
+        © 2026 Surenthini SIVAKUMAR
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
