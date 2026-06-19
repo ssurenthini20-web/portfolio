@@ -16,36 +16,51 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Space Grotesk', 'Inter', sans-serif;
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   color: #fff;
   line-height: 1.5;
   overflow-x: hidden;
-  cursor: none;
 }
 
-/* Cursor personnalisé */
-.cursor {
-  width: 8px;
-  height: 8px;
-  background: var(--secondary);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.1s;
+/* Curseur personnalisé : uniquement sur les écrans avec souris/trackpad */
+@media (pointer: fine) {
+  body { cursor: none; }
+
+  .cursor {
+    width: 8px;
+    height: 8px;
+    background: var(--secondary);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s;
+  }
+
+  .cursor-follower {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
 }
 
-.cursor-follower {
-  width: 30px;
-  height: 30px;
-  border: 2px solid var(--secondary);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  transition: transform 0.2s ease;
+@media (pointer: coarse) {
+  .cursor, .cursor-follower { display: none; }
 }
 
 /* Particules canvas */
@@ -65,13 +80,29 @@ body {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
-  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), border-color 0.4s, box-shadow 0.4s;
 }
 
 .glass-card:hover {
   transform: translateY(-5px);
   border-color: var(--secondary);
   box-shadow: var(--shadow);
+}
+
+/* Pendant l'inclinaison 3D au survol (souris uniquement, voir script.js), on coupe la transition
+   pour un suivi instantané du curseur ; elle revient au relâchement. */
+.tilting {
+  transition: border-color 0.4s, box-shadow 0.4s !important;
+}
+
+/* Focus clavier visible partout (accessibilité) */
+a:focus-visible,
+button:focus-visible,
+.flip-card:focus-visible,
+.qualite-card:focus-visible,
+.glass-card:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
 }
 
 /* Header */
@@ -131,13 +162,17 @@ nav a::after {
   transition: 0.3s;
 }
 
-nav a:hover::after {
+nav a:hover::after,
+nav a.active::after {
   width: 100%;
 }
 
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -147,6 +182,7 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
   padding: 6rem 2rem 2rem;
   position: relative;
   z-index: 1;
@@ -155,6 +191,27 @@ nav a:hover::after {
 .hero-content {
   flex: 1;
   max-width: 600px;
+}
+
+@keyframes heroReveal {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content > * {
+  opacity: 0;
+  animation: heroReveal 0.7s ease forwards;
+}
+
+.hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.25s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.4s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.55s; }
+.hero-content > *:nth-child(5) { animation-delay: 0.7s; }
+
+.hero-visual {
+  animation: heroReveal 1s ease 0.3s forwards;
+  opacity: 0;
 }
 
 .hero-badge {
@@ -227,7 +284,7 @@ nav a:hover::after {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -240,6 +297,7 @@ nav a:hover::after {
   flex: 1;
   position: relative;
   height: 400px;
+  min-width: 250px;
 }
 
 .data-sphere {
@@ -257,6 +315,53 @@ nav a:hover::after {
 @keyframes pulse {
   0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
   50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.hero-photo-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--secondary);
+  box-shadow: 0 0 40px rgba(108, 92, 231, 0.5), var(--shadow);
+  z-index: 2;
+  animation: floatPhoto 5s ease-in-out infinite;
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes floatPhoto {
+  0%, 100% { transform: translate(-50%, -50%); }
+  50% { transform: translate(-50%, calc(-50% - 10px)); }
+}
+
+/* Réseau de données : signature visuelle animée du hero (canvas JS, voir script.js) */
+.data-network {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Barre de progression de lecture */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  z-index: 1100;
+  transition: width 0.1s ease-out;
 }
 
 /* Sections */
@@ -345,10 +450,134 @@ nav a:hover::after {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Mes Qualités */
+.qualites-wrapper {
+  margin-top: 3rem;
+}
+
+.subsection-title {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.subsection-title i {
+  color: var(--secondary);
+}
+
+.qualites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.qualite-card {
+  height: 220px;
+  perspective: 1000px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.qualite-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.qualite-card:hover .qualite-card-inner,
+.qualite-card.flipped .qualite-card-inner {
+  transform: rotateY(180deg);
+}
+
+.qualite-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qualite-front {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.qualite-front i {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.qualite-back {
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.92), rgba(90, 74, 215, 0.92));
+  backdrop-filter: blur(12px);
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.qualite-back h4 {
+  margin-bottom: 0.8rem;
+}
+
+.todo-placeholder {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px dashed var(--secondary);
+  border-radius: 12px;
+  padding: 0.6rem;
+  background: rgba(0, 0, 0, 0.15);
+}
+
 /* Timeline */
+/* Parcours : timeline + photo en illustration */
+.parcours-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .timeline {
+  flex: 2;
+  min-width: 280px;
   position: relative;
   padding-left: 2rem;
+}
+
+.parcours-photo {
+  flex: 1;
+  min-width: 240px;
+  padding: 0.8rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.parcours-photo img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.parcours-photo figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.8rem;
 }
 
 .timeline::before {
@@ -366,6 +595,7 @@ nav a:hover::after {
   margin-bottom: 2rem;
   padding: 1.5rem;
   margin-left: 2rem;
+  transition: transform 0.3s, border-color 0.4s, box-shadow 0.4s;
 }
 
 .timeline-item::before {
@@ -424,14 +654,11 @@ nav a:hover::after {
   height: 100%;
   background: var(--secondary);
   border-radius: 3px;
-  animation: slideIn 1s ease-out;
+  width: 0;
+  transition: width 1s ease-out;
 }
 
-@keyframes slideIn {
-  from { width: 0; }
-}
-
-/* Flip Cards */
+/* Flip Cards (projets) */
 .projets-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -456,7 +683,8 @@ nav a:hover::after {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -587,7 +815,7 @@ nav a:hover::after {
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 50px;
-  transition: 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .contact-item:hover {
@@ -630,7 +858,7 @@ footer {
 .footer-social a {
   color: white;
   font-size: 1.2rem;
-  transition: 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .footer-social a:hover {
@@ -638,7 +866,7 @@ footer {
   transform: translateY(-3px);
 }
 
-/* Animations */
+/* Animations au scroll */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -650,26 +878,115 @@ footer {
   transform: translateY(0);
 }
 
+/* Respect des préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Responsive */
+@media (max-width: 992px) {
+  .hero-visual { height: 280px; }
+  .data-sphere { width: 220px; height: 220px; }
+  .hero-photo-frame { width: 180px; height: 180px; }
+}
+
 @media (max-width: 768px) {
   nav ul {
     display: none;
   }
-  
+
   .menu-toggle {
     display: block;
   }
-  
+
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(30, 30, 47, 0.97);
+    backdrop-filter: blur(12px);
+    padding: 2rem;
+    gap: 1.2rem;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
     padding-top: 5rem;
   }
-  
+
   .hero-stats {
     justify-content: center;
   }
-  
+
   .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 200px;
+  }
+
+  .hero-photo-frame {
+    width: 130px;
+    height: 130px;
+  }
+
+  .section-header h2 {
     font-size: 2rem;
   }
+
+  .apropos-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item {
+    margin-left: 1.5rem;
+  }
+
+  .timeline-item::before {
+    left: -2.1rem;
+  }
+
+  .parcours-photo {
+    position: static;
+    top: auto;
+  }
+
+  .parcours-photo img {
+    height: 220px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+  }
+
+  .qualite-card, .flip-card {
+    height: 280px;
+  }
+}
