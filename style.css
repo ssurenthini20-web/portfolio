@@ -474,7 +474,7 @@ nav a.active::after {
 }
 
 .qualite-card {
-  height: 220px;
+  height: 280px;
   perspective: 1000px;
   cursor: pointer;
   background: transparent;
@@ -490,7 +490,6 @@ nav a.active::after {
   transform-style: preserve-3d;
 }
 
-.qualite-card:hover .qualite-card-inner,
 .qualite-card.flipped .qualite-card-inner {
   transform: rotateY(180deg);
 }
@@ -529,6 +528,13 @@ nav a.active::after {
 
 .qualite-back h4 {
   margin-bottom: 0.8rem;
+}
+
+.qualite-back p {
+  text-align: left;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .todo-placeholder {
@@ -683,7 +689,6 @@ nav a.active::after {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner,
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -797,6 +802,201 @@ nav a.active::after {
 .objectif-card h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+}
+
+/* Pourquoi la science des données */
+.pourquoi-card {
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pourquoi-card::before {
+  content: '\201C';
+  position: absolute;
+  top: -2.5rem;
+  left: 1rem;
+  font-size: 11rem;
+  font-family: Georgia, serif;
+  color: rgba(108, 92, 231, 0.15);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.pourquoi-quote-icon {
+  font-size: 1.6rem;
+  color: var(--secondary);
+  opacity: 0.7;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.pourquoi-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: var(--secondary);
+  position: relative;
+}
+
+.pourquoi-card p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.02rem;
+  position: relative;
+}
+
+.pourquoi-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Stage */
+.stage-card {
+  padding: 2.5rem;
+}
+
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stage-entreprise {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stage-entreprise i {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+.stage-entreprise h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.stage-entreprise p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.stage-dates {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  background: rgba(108, 92, 231, 0.25);
+  border-radius: 30px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.stage-dates i {
+  color: var(--secondary);
+}
+
+.stage-sujet {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.stage-missions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stage-mission {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.stage-mission:hover {
+  transform: translateY(-4px);
+  border-color: var(--secondary);
+}
+
+.stage-mission i {
+  font-size: 1.8rem;
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
+}
+
+.stage-mission h4 {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.stage-mission p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.stage-competences {
+  margin-bottom: 2rem;
+}
+
+.stage-competences h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.stage-competences h4 i {
+  color: var(--secondary);
+}
+
+.stage-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  list-style: none;
+}
+
+.stage-tags li {
+  background: rgba(255, 217, 102, 0.15);
+  border: 1px solid rgba(255, 217, 102, 0.3);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+}
+
+.stage-reflexion h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.stage-reflexion h4 i {
+  color: var(--secondary);
+}
+
+.stage-reflexion p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.92rem;
+}
+
+.stage-reflexion p:last-child {
+  margin-bottom: 0;
 }
 
 /* Contact */
@@ -974,6 +1174,11 @@ footer {
   .footer-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .stage-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
