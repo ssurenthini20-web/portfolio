@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inclinaison 3D douce au survol (souris/trackpad uniquement)
   if (hasFinePointer) {
-    const tiltSelectors = '.timeline-item, .competence-card, .international-card, .objectif-card, .contact-item, .apropos-container, .parcours-photo';
+    const tiltSelectors = '.timeline-item, .competence-card, .international-card, .objectif-card, .contact-item, .apropos-container, .parcours-photo, .stage-card, .pourquoi-card';
     document.querySelectorAll(tiltSelectors).forEach(el => {
       el.addEventListener('mouseenter', () => el.classList.add('tilting'));
       el.addEventListener('mousemove', (e) => {
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Apparition progressive des cartes au scroll
-  const cards = document.querySelectorAll('.flip-card, .qualite-card, .international-card, .objectif-card');
+  const cards = document.querySelectorAll('.flip-card, .qualite-card, .international-card, .objectif-card, .stage-mission');
   cards.forEach((card, index) => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
