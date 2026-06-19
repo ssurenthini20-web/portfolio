@@ -13,11 +13,14 @@
 </head>
 <body>
   <!-- Particules canvas background -->
-  <canvas id="particles-canvas"></canvas>
-  
-  <!-- Cursor personnalisé -->
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Barre de progression de lecture -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Cursor personnalisé (désactivé automatiquement sur mobile/tactile, voir script.js) -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
 
   <header>
     <div class="logo">
@@ -29,13 +32,13 @@
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#competences">Compétences</a></li>
-        <li><a href="#projets">Projets & SAÉ</a></li>
+        <li><a href="#projets">Projets &amp; SAÉ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="menu-toggle">
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
       <i class="fas fa-bars"></i>
-    </div>
+    </button>
   </header>
 
   <!-- Hero Section -->
@@ -53,7 +56,7 @@
         </div>
         <div class="stat">
           <span class="stat-number">7</span>
-          <span class="stat-label">Langages & Outils</span>
+          <span class="stat-label">Langages &amp; Outils</span>
         </div>
         <div class="stat">
           <span class="stat-number">100</span>
@@ -66,8 +69,11 @@
       </a>
     </div>
     <div class="hero-visual">
-      <div class="data-sphere"></div>
-      <div class="code-rain"></div>
+      <div class="data-sphere" aria-hidden="true"></div>
+      <canvas class="data-network" aria-hidden="true"></canvas>
+      <div class="hero-photo-frame">
+        <img src="photo1.jpg" alt="Surenthini SIVAKUMAR" loading="eager">
+      </div>
     </div>
   </section>
 
@@ -81,7 +87,7 @@
     <div class="apropos-container glass-card">
       <div class="apropos-photo">
         <div class="photo-frame">
-          <img src="photo.JPG" alt="Surenthini SIVAKUMAR">
+          <img src="photo.JPG" alt="Portrait de Surenthini SIVAKUMAR" loading="lazy">
           <div class="photo-glow"></div>
         </div>
       </div>
@@ -92,36 +98,98 @@
         <p>Mon objectif : devenir <strong>analyste de données dans le secteur médical</strong>. Pouvoir aider les professionnels de santé à prendre de meilleures décisions grâce aux données, ça me motive vraiment !</p>
       </div>
     </div>
+
+    <!-- Mes Qualités -->
+    <div class="qualites-wrapper">
+      <h3 class="subsection-title"><i class="fas fa-star"></i> Mes qualités</h3>
+      <div class="qualites-grid">
+
+        <div class="qualite-card glass-card" tabindex="0" role="button" aria-pressed="false">
+          <div class="qualite-card-inner">
+            <div class="qualite-face qualite-front">
+              <i class="fas fa-mountain"></i>
+              <h4>Persévérance</h4>
+              <span class="flip-hint">Cliquez pour voir l'exemple</span>
+            </div>
+            <div class="qualite-face qualite-back">
+              <h4>Persévérance</h4>
+              <p class="todo-placeholder">
+                ✏️ À rédiger toi-même (2-3 phrases) — éléments à utiliser : pas le niveau en maths en arrivant en BUT après le bac pro → discussion avec M. Hébert qui t'a redonné la motivation → aujourd'hui tu vas au bout de tes efforts.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="qualite-card glass-card" tabindex="0" role="button" aria-pressed="false">
+          <div class="qualite-card-inner">
+            <div class="qualite-face qualite-front">
+              <i class="fas fa-language"></i>
+              <h4>Capacité d'adaptation</h4>
+              <span class="flip-hint">Cliquez pour voir l'exemple</span>
+            </div>
+            <div class="qualite-face qualite-back">
+              <h4>Capacité d'adaptation</h4>
+              <p class="todo-placeholder">
+                ✏️ À rédiger toi-même (2-3 phrases) — éléments à utiliser : arrivée en France sans parler français → entraînement seule via des vidéos YouTube pour apprendre à parler → aujourd'hui tu t'adaptes vite à un cours en anglais (semaine internationale) et à un nouvel outil (R, Power BI...).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="qualite-card glass-card" tabindex="0" role="button" aria-pressed="false">
+          <div class="qualite-card-inner">
+            <div class="qualite-face qualite-front">
+              <i class="fas fa-magnifying-glass"></i>
+              <h4>Rigueur</h4>
+              <span class="flip-hint">Cliquez pour voir l'exemple</span>
+            </div>
+            <div class="qualite-face qualite-back">
+              <h4>Rigueur</h4>
+              <p class="todo-placeholder">
+                ✏️ À rédiger toi-même (2-3 phrases) — éléments à utiliser : nettoyage du dataset OMS (valeurs manquantes, lignes/colonnes vides) → risque d'un résultat faussé si mal fait → vérification des valeurs avant/après + test de plusieurs méthodes pour gérer les valeurs manquantes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- Parcours -->
   <section id="parcours" class="section fade-in">
     <div class="section-header">
       <span class="section-tag">Mon parcours</span>
-      <h2>Parcours & Formation</h2>
+      <h2>Parcours &amp; Formation</h2>
       <div class="section-line"></div>
     </div>
-    <div class="timeline">
-      <div class="timeline-item glass-card">
-        <span class="timeline-date">2024 - Présent</span>
-        <h3>BUT Sciences des données, 2ème année</h3>
-        <p>Université Sorbonne Paris Nord, Villetaneuse</p>
+    <div class="parcours-layout">
+      <div class="timeline">
+        <div class="timeline-item glass-card">
+          <span class="timeline-date">2024 - Présent</span>
+          <h3>BUT Sciences des données, 2ème année</h3>
+          <p>Université Sorbonne Paris Nord, Villetaneuse</p>
+        </div>
+        <div class="timeline-item glass-card">
+          <span class="timeline-date">2020 - 2023</span>
+          <h3>BAC PRO ASSP</h3>
+          <p>Accompagnement, Soins et Services à la Personne - Mention Très bien<br>Lycée Blaise Pascal, Villemomble</p>
+        </div>
+        <div class="timeline-item glass-card">
+          <span class="timeline-date">Septembre 2026</span>
+          <h3>Alternance en Data Science</h3>
+          <p>Recherche d'une alternance de 12 mois pour approfondir mes compétences en traitement de données</p>
+        </div>
+        <div class="timeline-item glass-card">
+          <span class="timeline-date">Objectif à long terme</span>
+          <h3>Data Analyst santé</h3>
+          <p>Poursuite d'études en Master pour produire des prédictions impactantes dans la prise de décision médicale</p>
+        </div>
       </div>
-      <div class="timeline-item glass-card">
-        <span class="timeline-date">2020 - 2023</span>
-        <h3>BAC PRO ASSP</h3>
-        <p>Accompagnement, Soins et Services à la Personne - Mention Très bien<br>Lycée Blaise Pascal, Villemomble</p>
-      </div>
-      <div class="timeline-item glass-card">
-        <span class="timeline-date">Septembre 2026</span>
-        <h3>Alternance en Data Science</h3>
-        <p>Recherche d'une alternance de 12 mois pour approfondir mes compétences en traitement de données</p>
-      </div>
-      <div class="timeline-item glass-card">
-        <span class="timeline-date">Objectif à long terme</span>
-        <h3>Data Analyst santé</h3>
-        <p>Poursuite d'études en Master pour produire des prédictions impactantes dans la prise de décision médicale</p>
-      </div>
+      <figure class="parcours-photo glass-card">
+        <img src="photo2.jpg" alt="Surenthini SIVAKUMAR en train de travailler sur un projet data" loading="lazy">
+        <figcaption>En plein travail sur mes projets data</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -150,7 +218,7 @@
       </div>
       <div class="competence-card glass-card">
         <i class="fas fa-chart-line"></i>
-        <span>Excel & Power BI</span>
+        <span>Excel &amp; Power BI</span>
         <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
       </div>
       <div class="competence-card glass-card">
@@ -170,11 +238,11 @@
   <section id="projets" class="section fade-in">
     <div class="section-header">
       <span class="section-tag">Réalisations</span>
-      <h2>Projets & SAÉ</h2>
+      <h2>Projets &amp; SAÉ</h2>
       <div class="section-line"></div>
     </div>
     <div class="projets-grid">
-      <div class="flip-card">
+      <div class="flip-card" tabindex="0" role="button" aria-pressed="false">
         <div class="flip-card-inner">
           <div class="flip-card-front glass-card">
             <i class="fas fa-chart-simple"></i>
@@ -194,7 +262,7 @@
         </div>
       </div>
 
-      <div class="flip-card">
+      <div class="flip-card" tabindex="0" role="button" aria-pressed="false">
         <div class="flip-card-inner">
           <div class="flip-card-front glass-card">
             <i class="fas fa-chart-line"></i>
@@ -214,12 +282,12 @@
         </div>
       </div>
 
-      <div class="flip-card">
+      <div class="flip-card" tabindex="0" role="button" aria-pressed="false">
         <div class="flip-card-inner">
           <div class="flip-card-front glass-card">
             <i class="fas fa-cloud-sun"></i>
             <h3>Événements climatiques</h3>
-            <p>R & Shiny</p>
+            <p>R &amp; Shiny</p>
             <span class="flip-hint">Cliquez pour voir</span>
           </div>
           <div class="flip-card-back glass-card">
@@ -234,7 +302,7 @@
         </div>
       </div>
 
-      <div class="flip-card">
+      <div class="flip-card" tabindex="0" role="button" aria-pressed="false">
         <div class="flip-card-inner">
           <div class="flip-card-front glass-card">
             <i class="fas fa-heartbeat"></i>
@@ -243,7 +311,7 @@
             <span class="flip-hint">Cliquez pour voir</span>
           </div>
           <div class="flip-card-back glass-card">
-            <h3>🏥 SAÉ S4: Datamining</h3>
+            <h3>🏥 SAÉ S4 : Datamining</h3>
             <p>Analyse dataset OMS - Espérance de vie et facteurs économiques/sanitaires.</p>
             <ul>
               <li>Nettoyage des données</li>
@@ -268,7 +336,7 @@
         <div class="card-icon"><i class="fas fa-plane-departure"></i></div>
         <h3>Semaine internationale à l'IUT</h3>
         <p><strong>Une expérience unique :</strong> 3 jours de cours 100% anglais avec des professeurs venus du Portugal, Italie, Albanie, Lettonie et Finlande.</p>
-        <p><strong>Ce que j'ai appris :</strong> Python & Pandas, SQL, PHP, IoT, marketing digital, statistiques appliquées.</p>
+        <p><strong>Ce que j'ai appris :</strong> Python &amp; Pandas, SQL, PHP, IoT, marketing digital, statistiques appliquées.</p>
         <p>Cette semaine m'a permis de m'adapter à des méthodes d'enseignement différentes et de découvrir une approche internationale de la data.</p>
         <p><em>Mon ressenti :</em> Très enrichissante, elle m'a donné encore plus envie de progresser en anglais et de m'ouvrir à l'international.</p>
       </div>
@@ -323,7 +391,7 @@
       <div class="footer-social">
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
   </footer>
