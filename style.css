@@ -999,6 +999,97 @@ nav a.active::after {
   margin-bottom: 0;
 }
 
+/* Bilan des compétences */
+.bilan-intro {
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.bilan-intro p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.bilan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.bilan-card {
+  padding: 2rem;
+}
+
+.bilan-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bilan-card-header i {
+  font-size: 1.6rem;
+  color: var(--secondary);
+}
+
+.bilan-card-header h3 {
+  font-size: 1.1rem;
+}
+
+.bilan-item {
+  margin-bottom: 1.2rem;
+}
+
+.bilan-item:last-child {
+  margin-bottom: 0;
+}
+
+.bilan-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.bilan-item p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.wip-card {
+  padding: 2.5rem;
+}
+
+.wip-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.wip-header i {
+  font-size: 1.6rem;
+  color: var(--secondary);
+}
+
+.wip-header h3 {
+  font-size: 1.2rem;
+}
+
+.wip-card p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
 /* Contact */
 .contact-card {
   display: flex;
